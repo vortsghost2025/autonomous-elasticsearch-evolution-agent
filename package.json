@@ -1,0 +1,13 @@
+{
+  "name": "autonomous-elasticsearch-evolution-agent",
+  "version": "1.0.0",
+  "description": "A 14-phase autonomous system that evolves Elasticsearch clusters",
+  "main": "demo.js",
+  "scripts": {
+    "start": "node demo.js",
+    "demo": "node demo.js"
+  },
+  "keywords": ["elasticsearch", "autonomous", "optimization"],
+  "author": "Autonomous Systems Lab",
+  "license": "MIT"
+}
