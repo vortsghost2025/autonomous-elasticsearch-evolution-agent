@@ -4,18 +4,46 @@
  * from an Elasticsearch cluster
  */
 
+import PersistentMemory from './persistent-memory.js';
+
 export class ElasticsearchMetricsCollector {
   constructor(esClient, options = {}) {
     this.esClient = esClient;
     this.clusterName = options.clusterName || 'default-cluster';
     this.collectionInterval = options.collectionInterval || 60000; // 1 minute
     this.metricsHistory = [];
+    this.persistentMemory = options.persistentMemory || new PersistentMemory(options.memoryOptions);
+    this.isInitialized = false;
+  }
+
+  async initialize() {
+    if (this.isInitialized) return;
+    
+    try {
+      // Load metrics history from persistent memory
+      const savedMetrics = await this.persistentMemory.get('metricsHistory', []);
+      if (Array.isArray(savedMetrics) && savedMetrics.length > 0) {
+        this.metricsHistory = savedMetrics;
+        console.log(`[ElasticsearchMetricsCollector] Restored ${this.metricsHistory.length} historical metrics`);
+      }
+      
+      this.isInitialized = true;
+      console.log('[ElasticsearchMetricsCollector] Initialized with persistent memory');
+    } catch (error) {
+      console.error('[ElasticsearchMetricsCollector] Error during initialization:', error);
+      // Continue anyway, we don't want to crash if memory restore fails
+      this.isInitialized = true;
+    }
   }
 
   /**
    * Collect comprehensive cluster metrics
    */
   async collectMetrics() {
+    if (!this.isInitialized) {
+      await this.initialize();
+    }
+
     try {
       const [clusterHealth, nodeStats, indexStats] = await Promise.all([
         this.getClusterHealth(),
@@ -39,8 +67,13 @@ export class ElasticsearchMetricsCollector {
         this.metricsHistory.shift();
       }
 
+      // Persist metrics to memory
+      await this.persistentMemory.set('metricsHistory', this.metricsHistory);
+
       return metrics;
     } catch (error) {
+      // Log the error to persistent memory
+      await this.persistentMemory.logError(error);
       console.error('[ElasticsearchMetricsCollector] Error collecting metrics:', error);
       throw error;
     }
@@ -195,7 +228,11 @@ export class ElasticsearchMetricsCollector {
   /**
    * Get recent metrics history
    */
-  getRecentMetrics(minutes = 5) {
+  async getRecentMetrics(minutes = 5) {
+    if (!this.isInitialized) {
+      await this.initialize();
+    }
+    
     const cutoff = Date.now() - (minutes * 60 * 1000);
     return this.metricsHistory.filter(m => m.timestamp >= cutoff);
   }
@@ -203,7 +240,11 @@ export class ElasticsearchMetricsCollector {
   /**
    * Calculate metric trends (improving, stable, degrading)
    */
-  calculateTrends() {
+  async calculateTrends() {
+    if (!this.isInitialized) {
+      await this.initialize();
+    }
+    
     if (this.metricsHistory.length < 2) {
       return { trend: 'UNKNOWN', changes: [] };
     }

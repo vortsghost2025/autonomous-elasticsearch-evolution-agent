@@ -1,0 +1,36 @@
+2026-02-20 08:17:36 info: Lingma [version: 2.5.20, lang: en, platform: win32, arch: x64, appName=Visual Studio Code, runMode: local, extensionKind=1, remoteName=undefined, wsl=undefined, remoteContainers=undefined, extensionMode=1] is starting now!
+2026-02-20 08:17:36 info: Congratulations, "Lingma" is now active!
+2026-02-20 08:17:36 info: start update binary: c:\Users\seand\.vscode\extensions\alibaba-cloud.tongyi-lingma-2.5.20\dist
+2026-02-20 08:17:36 info: .info not exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 08:17:36 info: read info. pid=undefined
+2026-02-20 08:17:36 info: unzipBin: start
+2026-02-20 08:17:44 info: unzip onclose
+2026-02-20 08:17:44 info: judgeUnzipComplete: start
+2026-02-20 08:17:44 info: unzip onfinish
+2026-02-20 08:17:45 info: judgeUnzipComplete: get zipFileCount 434 11 11 success=true
+2026-02-20 08:17:45 info: [BinaryManager] Changing binary permissions for path: C:\autonomous-elasticsearch-evolution-agent\bin
+2026-02-20 08:17:45 info: [BinaryManager] Changing binary permissions for path: C:\autonomous-elasticsearch-evolution-agent\bin/2.5.20
+2026-02-20 08:17:45 info: [BinaryManager] Changing binary permissions for path: C:\autonomous-elasticsearch-evolution-agent\bin/2.5.20/aarch64_darwin
+2026-02-20 08:17:45 info: [BinaryManager] Changing binary permissions for path: C:\autonomous-elasticsearch-evolution-agent\bin/2.5.20/aarch64_linux
+2026-02-20 08:17:45 info: [BinaryManager] Changing binary permissions for path: C:\autonomous-elasticsearch-evolution-agent\bin/2.5.20/aarch64_windows
+2026-02-20 08:17:45 info: [BinaryManager] Changing binary permissions for path: C:\autonomous-elasticsearch-evolution-agent\bin/2.5.20/extension
+2026-02-20 08:17:45 info: [BinaryManager] Changing binary permissions for path: C:\autonomous-elasticsearch-evolution-agent\bin/2.5.20/x86_64_darwin
+2026-02-20 08:17:45 info: [BinaryManager] Changing binary permissions for path: C:\autonomous-elasticsearch-evolution-agent\bin/2.5.20/x86_64_linux
+2026-02-20 08:17:45 info: [BinaryManager] Changing binary permissions for path: C:\autonomous-elasticsearch-evolution-agent\bin/2.5.20/x86_64_windows
+2026-02-20 08:17:45 info: .info not exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 08:17:45 info: Read cosy info empty, start process now. 
+2026-02-20 08:17:45 info: [BinaryManager] Begin starting Lingma process, cosyHome=C:\autonomous-elasticsearch-evolution-agent, throwError=false
+2026-02-20 08:17:45 info: [BinaryManager] Binary root path: C:\autonomous-elasticsearch-evolution-agent\bin
+2026-02-20 08:17:45 info: [BinaryManager] Detected binary version: 2.5.20
+2026-02-20 08:17:45 info: [BinaryManager] Platform binary paths, executeBinPath=C:\autonomous-elasticsearch-evolution-agent\bin\2.5.20\x86_64_windows\Lingma.exe, binaryPath=C:\autonomous-elasticsearch-evolution-agent\bin\2.5.20\x86_64_windows
+2026-02-20 08:17:45 info: [BinaryManager] Binary executable exists, calling startCosyProcess, executeBinPath=C:\autonomous-elasticsearch-evolution-agent\bin\2.5.20\x86_64_windows\Lingma.exe
+2026-02-20 08:17:45 info: [StartProcess] Starting Lingma process, binaryPath=C:\autonomous-elasticsearch-evolution-agent\bin\2.5.20\x86_64_windows\Lingma.exe, workDir=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache, command=C:\Windows\System32\cmd.exe /c call "C:\autonomous-elasticsearch-evolution-agent\bin\2.5.20\x86_64_windows\Lingma.exe" start --workDir "C:\autonomous-elasticsearch-evolution-agent\sharedClientCache"
+2026-02-20 08:17:45 info: [BinaryManager] startCosyProcess called successfully
+2026-02-20 08:17:45 info: [BinaryManager] Starting process finished, reset cosyBinaryStarting flag
+2026-02-20 08:17:52 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 08:17:52 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 08:17:52 info: Lingma try to connect to language server.
+2026-02-20 08:17:52 info: try to create ws connection
+2026-02-20 08:17:52 info: Lingma connected to language server successfully.
+2026-02-20 08:17:52 info: auth status synced. id=, status=1, whitelist=1, token=
+2026-02-20 08:17:55 info: try to create ws connection

@@ -1,0 +1,18 @@
+{
+  "beam_search_config": {
+    "beam_size": 3,
+    "topk": 3,
+    "token_threshold": 0.1,
+    "max_length": 10
+  },
+  "env": "local",
+  "global_config": {
+    "command_allow_list": "",
+    "endpoint": "",
+    "http_proxy": "",
+    "mcp_auto_run": "disable",
+    "proxy_mode": "system",
+    "web_tools_execution_mode": "enabledAskEveryTime"
+  },
+  "region_env": "intl"
+}

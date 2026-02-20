@@ -1,0 +1,217 @@
+2026-02-20T08:17:45.596-0500	INFO	===== Starting lingma service =====
+2026-02-20T08:17:45.645-0500	INFO	Init local db success.
+2026-02-20T08:17:45.659-0500	INFO	Lingma running on windows(amd64, Microsoft Windows [Version 10.0.26200.7840]) at C:\autonomous-elasticsearch-evolution-agent\sharedClientCache, version: 2.5.20
+2026-02-20T08:17:45.659-0500	INFO	Use system proxy, detect no proxy.
+2026-02-20T08:17:45.663-0500	INFO	Init local Machine Ip. ip=192.168.0.138
+2026-02-20T08:17:47.685-0500	INFO	Access lingma server success
+2026-02-20T08:17:47.685-0500	INFO	user info not exist, not login.
+2026-02-20T08:17:47.685-0500	INFO	No cached user info, please login.
+2026-02-20T08:17:47.685-0500	INFO	user info not exist, not login.
+2026-02-20T08:17:47.685-0500	INFO	extension node binary not found at C:\autonomous-elasticsearch-evolution-agent\bin\2.5.20\x86_64_windows\node.exe, will download later.
+2026-02-20T08:17:47.685-0500	INFO	user info not exist, not login.
+2026-02-20T08:17:47.685-0500	INFO	current login user not open downloadNodeVm
+2026-02-20T08:17:47.685-0500	INFO	start init system context provider
+2026-02-20T08:17:47.685-0500	INFO	user info not exist, not login.
+2026-02-20T08:17:47.685-0500	INFO	do start mcp severs. mcp config path: C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\extension\local\mcp.json
+2026-02-20T08:17:47.685-0500	INFO	init system context provider success
+2026-02-20T08:17:47.686-0500	INFO	local mcpConfig file not exists then create empty local mcpConfig
+2026-02-20T08:17:47.686-0500	INFO	Preparing inference environment
+2026-02-20T08:17:47.686-0500	INFO	Checking update ...
+2026-02-20T08:17:47.686-0500	WARN	Failed to read raw environment file
+2026-02-20T08:17:47.686-0500	WARN	Local model is not ready, local inference is currently unavailable
+2026-02-20T08:17:47.687-0500	INFO	user info not exist, not login.
+2026-02-20T08:17:47.687-0500	INFO	Set local model service home: C:\autonomous-elasticsearch-evolution-agent
+2026-02-20T08:17:47.687-0500	WARN	Failed to load model config
+2026-02-20T08:17:47.687-0500	ERROR	Failed to write local config
+2026-02-20T08:17:47.687-0500	WARN	Failed to update Cosy model
+2026-02-20T08:17:47.687-0500	INFO	Using profile websocket channel: 37994
+2026-02-20T08:17:47.687-0500	INFO	No inference environment found, initialize it
+2026-02-20T08:17:47.687-0500	ERROR	clear index dir C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\index\meta error: open C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\index\meta: The system cannot find the path specified.
+2026-02-20T08:17:47.691-0500	INFO	info file created.
+2026-02-20T08:17:47.691-0500	INFO	user info not exist, not login.
+2026-02-20T08:17:48.072-0500	INFO	Server is ready at: 37002 / 38212
+2026-02-20T08:17:50.253-0500	INFO	Downloading... windows-amd64.temp,  0.11% 
+
+2026-02-20T08:17:52.790-0500	INFO	Download completed. filePath: C:\autonomous-elasticsearch-evolution-agent\model\env\windows-amd64.temp
+2026-02-20T08:17:52.790-0500	INFO	Download saved to :C:\autonomous-elasticsearch-evolution-agent\model\env\windows-amd64
+2026-02-20T08:17:52.852-0500	INFO	Succeed to create inference environment
+2026-02-20T08:17:52.852-0500	INFO	Succeed to update inference env
+2026-02-20T08:17:52.953-0500	INFO	Client 0xc000008a98 is registered
+2026-02-20T08:17:52.953-0500	INFO	Connection closed: websocket: close 1005 (no status)
+2026-02-20T08:17:52.953-0500	INFO	Client 0xc000008a98 is unregistered
+2026-02-20T08:17:52.956-0500	INFO	Client 0xc000240090 is registered
+2026-02-20T08:17:52.959-0500	INFO	initializing client: 0xc000240090 workspace: [{c:\autonomous-elasticsearch-evolution-agent autonomous-elasticsearch-evolution-agent}], ideSeries: VSCode, idePlatform: vscode, ideVersion: 1.109.5, pluginVersion: 2.5.20
+2026-02-20T08:17:52.959-0500	INFO	create new index workspace c:\autonomous-elasticsearch-evolution-agent
+2026-02-20T08:17:52.959-0500	INFO	enqueue index workspace c:\autonomous-elasticsearch-evolution-agent
+2026-02-20T08:17:52.959-0500	INFO	index consume startup data:c:\autonomous-elasticsearch-evolution-agent: starting index...
+2026-02-20T08:17:52.959-0500	INFO	skip gitignore file: .gitignore doesn't exist
+2026-02-20T08:17:52.959-0500	INFO	Server initialized, time cost: 502.3µs
+2026-02-20T08:17:52.959-0500	INFO	start to index files in workspace: c:\autonomous-elasticsearch-evolution-agent cores:16
+2026-02-20T08:17:52.959-0500	INFO	user info not exist, not login.
+2026-02-20T08:17:52.959-0500	INFO	user info not exist, not login.
+2026-02-20T08:17:52.962-0500	WARN	ExtensionApi executor not inited.
+2026-02-20T08:17:52.964-0500	WARN	fail to locate module for dir c:\autonomous-elasticsearch-evolution-agent, err: go.mod file not found
+2026-02-20T08:17:52.964-0500	WARN	[MTree] c:\autonomous-elasticsearch-evolution-agent Load workspace ignore failed: .gitignore doesn't exist
+2026-02-20T08:17:52.964-0500	INFO	user info not exist, not login.
+2026-02-20T08:17:52.991-0500	INFO	did save uri:c:\Users\seand\AppData\Roaming\Code\User\settings.json
+2026-02-20T08:17:53.021-0500	INFO	Http proxy configure changed
+2026-02-20T08:17:53.021-0500	INFO	Broadcast 1 clients, 1 success
+2026-02-20T08:17:53.034-0500	INFO	did save uri:c:\Users\seand\AppData\Roaming\Code\User\settings.json
+2026-02-20T08:17:53.058-0500	INFO	Http proxy configure changed
+2026-02-20T08:17:53.063-0500	INFO	Broadcast 1 clients, 1 success
+2026-02-20T08:17:53.197-0500	INFO	create index: C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\index\completion\v4\autonomous-elasticsearch-evolution-agent_baa0ee842fdbd9363e7d6f947a010257 success. cost 10.2131ms
+2026-02-20T08:17:53.446-0500	INFO	index javascript count:3 nochange:0 walk cost:23
+2026-02-20T08:17:53.558-0500	INFO	indexer walk files count:23 ignore:25 walk cost:599
+2026-02-20T08:17:53.558-0500	INFO	user info not exist, not login.
+2026-02-20T13:17:55.624Z	INFO	user info not exist, not login.
+2026-02-20T13:17:55.624Z	INFO	check switched time zone for intl.
+2026-02-20T13:17:55.626Z	INFO	region env is changed to intl
+2026-02-20T13:17:55.626Z	INFO	Logging via web
+2026-02-20T13:17:55.626Z	INFO	Opening browser to login
+2026-02-20T13:17:55.626Z	INFO	user info not exist, not login.
+2026-02-20T13:19:00.691Z	INFO	user log action requested. userId=5182069593046708
+2026-02-20T13:19:00.692Z	INFO	Broadcast 1 clients, 1 success
+2026-02-20T13:19:00.971Z	INFO	current login user not open pullServerConfig
+2026-02-20T13:19:00.971Z	INFO	current not public enterprise user,not open pullServerExtension config, clear server config
+2026-02-20T13:19:00.971Z	INFO	start notify node vm to refresh config
+2026-02-20T13:19:00.971Z	WARN	ExtensionApi executor not inited.
+2026-02-20T13:19:00.972Z	INFO	Broadcast 1 clients, 1 success
+2026-02-20T13:19:00.989Z	INFO	Broadcast 1 clients, 1 success
+2026-02-20T13:19:44.662Z	INFO	user log action requested. userId=5182069593046708
+2026-02-20T13:19:44.665Z	INFO	Broadcast 1 clients, 1 success
+2026-02-20T13:19:45.003Z	INFO	current login user not open pullServerConfig
+2026-02-20T13:19:45.003Z	INFO	current not public enterprise user,not open pullServerExtension config, clear server config
+2026-02-20T13:19:45.003Z	INFO	start notify node vm to refresh config
+2026-02-20T13:19:45.003Z	WARN	ExtensionApi executor not inited.
+2026-02-20T13:19:45.004Z	INFO	Broadcast 1 clients, 1 success
+2026-02-20T13:19:47.698Z	INFO	current login user not open downloadNodeVm
+2026-02-20T13:20:45.691Z	INFO	Reported 3/3 events
+2026-02-20T13:20:46.177Z	INFO	did close uri:c:\autonomous-elasticsearch-evolution-agent\package.json
+2026-02-20T13:20:52.997Z	INFO	did close uri:c:\Users\seand\AppData\Roaming\Code\User\settings.json
+2026-02-20T13:21:47.690Z	INFO	current login user not open downloadNodeVm
+2026-02-20T13:22:27.634Z	INFO	OperateSnapshot snapshot id:, type:UPDATE_CHAT_RECORD
+2026-02-20T13:22:27.657Z	INFO	check allow refine query error, reason=history records is 0, too short, ignore refine query, requestId=6de38d04-32bc-456d-bda6-cf35db5aab68
+2026-02-20T13:22:28.371Z	INFO	Content limit processing completed. Total content size: 0/100000 characters
+2026-02-20T13:22:28.372Z	INFO	create agent=common-dev-agent-builder for session=6de38d04-32bc-456d-bda6-cf35db5aab68
+
+2026-02-20T13:22:28.372Z	WARN	GetChatSessionProjectURI sessionId: 57999a08-4c09-4d75-b5db-adca1abd37b9, error: sql: no rows in result set
+2026-02-20T13:22:28.372Z	INFO	Send request snapshot/syncAll CurrentSessionId: 57999a08-4c09-4d75-b5db-adca1abd37b9, CurrentSnapshotId: , CurrentSnapshotStatus: , Type: REFRESH_LIST
+2026-02-20T13:22:28.373Z	INFO	ClearSnapshot cost: 1.1277ms
+2026-02-20T13:22:28.381Z	INFO	start build chat indexing for c:\autonomous-elasticsearch-evolution-agent
+2026-02-20T13:22:28.381Z	INFO	skip gitignore file: .gitignore doesn't exist
+2026-02-20T13:22:28.381Z	INFO	start to index files in workspace: c:\autonomous-elasticsearch-evolution-agent cores:16
+2026-02-20T13:22:28.382Z	INFO	[]
+2026-02-20T13:22:28.388Z	INFO	create index: C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\index\chat\v4\autonomous-elasticsearch-evolution-agent_baa0ee842fdbd9363e7d6f947a010257 success. cost 6.938ms
+2026-02-20T13:22:28.388Z	INFO	This request is to securely record 35748 bytes of data
+2026-02-20T13:22:29.155Z	INFO	indexer walk files count:24 ignore:31 walk cost:774
+2026-02-20T13:22:29.155Z	WARN	[>                        ] 0.00%, Finished/Total: 0/24, WorkspacePath: c:\autonomous-elasticsearch-evolution-agent
+2026-02-20T13:22:32.723Z	INFO	[common_dev_agent] finish chat, chatRecordId=6de38d04-32bc-456d-bda6-cf35db5aab68, requestId=53b8b729-043a-4857-b0b6-854099883194, responseMeta={ID:chatcmpl-c18fc072-eb78-94a6-ab2a-762abc20ab48 FinishReason:tool_calls Usage:{PromptTokens:7948 CompletionTokens:155 TotalTokens:8103 CompletionTokensDetails:{ReasoningTokens:0} PromptTokensDetails:{CachedTokens:0}}}
+2026-02-20T13:22:32.753Z	INFO	Successfully updated tool result for chat message with id: 1eff18d2-8cd0-4934-8b3a-bde54a16d869
+2026-02-20T13:22:32.754Z	INFO	This request is to securely record 37850 bytes of data
+2026-02-20T13:22:35.470Z	INFO	[common_dev_agent] finish chat, chatRecordId=6de38d04-32bc-456d-bda6-cf35db5aab68, requestId=902f4201-0c51-4309-ae1c-b5b056ee50c0, responseMeta={ID:chatcmpl-3552b03b-5d67-9489-b99a-7e5ddd8d666d FinishReason:tool_calls Usage:{PromptTokens:8286 CompletionTokens:102 TotalTokens:8388 CompletionTokensDetails:{ReasoningTokens:0} PromptTokensDetails:{CachedTokens:7872}}}
+2026-02-20T13:22:35.504Z	INFO	Successfully updated tool result for chat message with id: 7a5fa50d-77f8-46f2-ba3f-bda1ce841c17
+2026-02-20T13:22:35.505Z	INFO	This request is to securely record 42436 bytes of data
+2026-02-20T13:22:38.599Z	INFO	[common_dev_agent] finish chat, chatRecordId=6de38d04-32bc-456d-bda6-cf35db5aab68, requestId=14b27120-bfbf-4c1e-af2c-18960eb4e866, responseMeta={ID:chatcmpl-d24e624d-5c47-9e4a-8817-7becdf959ef9 FinishReason:tool_calls Usage:{PromptTokens:9179 CompletionTokens:107 TotalTokens:9286 CompletionTokensDetails:{ReasoningTokens:0} PromptTokensDetails:{CachedTokens:8256}}}
+2026-02-20T13:22:38.627Z	INFO	Successfully updated tool result for chat message with id: 8b986bd1-3a01-4eab-9422-633252a60f27
+2026-02-20T13:22:38.628Z	INFO	This request is to securely record 47119 bytes of data
+2026-02-20T13:22:39.166Z	WARN	[>                        ] 0.00%, Finished/Total: 0/24, WorkspacePath: c:\autonomous-elasticsearch-evolution-agent
+2026-02-20T13:22:41.845Z	INFO	[common_dev_agent] finish chat, chatRecordId=6de38d04-32bc-456d-bda6-cf35db5aab68, requestId=22d2ba41-e8aa-49df-85f9-5f09b12e6723, responseMeta={ID:chatcmpl-5e691b1f-f5e1-9be4-9dea-c6aa8148ba24 FinishReason:tool_calls Usage:{PromptTokens:10012 CompletionTokens:94 TotalTokens:10106 CompletionTokensDetails:{ReasoningTokens:0} PromptTokensDetails:{CachedTokens:9152}}}
+2026-02-20T13:22:41.870Z	INFO	Successfully updated tool result for chat message with id: 86768c0e-d657-455d-8200-a340dc838f50
+2026-02-20T13:22:41.870Z	INFO	This request is to securely record 52164 bytes of data
+2026-02-20T13:22:44.521Z	INFO	[common_dev_agent] finish chat, chatRecordId=6de38d04-32bc-456d-bda6-cf35db5aab68, requestId=aad568d6-c367-4e84-a3f8-76b946e58407, responseMeta={ID:chatcmpl-87e19db6-c48c-9bcc-904d-fd2cdba99fc7 FinishReason:tool_calls Usage:{PromptTokens:10991 CompletionTokens:94 TotalTokens:11085 CompletionTokensDetails:{ReasoningTokens:0} PromptTokensDetails:{CachedTokens:9984}}}
+2026-02-20T13:22:44.553Z	INFO	Successfully updated tool result for chat message with id: 105bc1cb-edfa-455f-ac32-3420748c2654
+2026-02-20T13:22:44.553Z	INFO	This request is to securely record 54688 bytes of data
+2026-02-20T13:22:47.257Z	INFO	[common_dev_agent] finish chat, chatRecordId=6de38d04-32bc-456d-bda6-cf35db5aab68, requestId=7f9fb4a5-30e9-4ef5-b661-79a30f2f10fb, responseMeta={ID:chatcmpl-838ef5cb-a4a7-91ad-9434-1cad5d99c83a FinishReason:tool_calls Usage:{PromptTokens:11425 CompletionTokens:100 TotalTokens:11525 CompletionTokensDetails:{ReasoningTokens:0} PromptTokensDetails:{CachedTokens:10944}}}
+2026-02-20T13:22:47.281Z	INFO	Successfully updated tool result for chat message with id: a8564b24-1aa7-42da-a602-9d6dd27f92ea
+2026-02-20T13:22:47.281Z	INFO	This request is to securely record 59382 bytes of data
+2026-02-20T13:22:47.698Z	INFO	do pull config.json from server on schedule with period:5
+2026-02-20T13:22:47.699Z	INFO	current login user not open pullServerConfig
+2026-02-20T13:22:47.699Z	INFO	current not public enterprise user,not open pullServerExtension config
+2026-02-20T13:22:47.699Z	INFO	start notify node vm to refresh config
+2026-02-20T13:22:47.699Z	WARN	ExtensionApi executor not inited.
+2026-02-20T13:22:47.703Z	INFO	Broadcast 1 clients, 1 success
+2026-02-20T13:22:49.178Z	WARN	[>                        ] 0.00%, Finished/Total: 0/24, WorkspacePath: c:\autonomous-elasticsearch-evolution-agent
+2026-02-20T13:22:49.953Z	INFO	[common_dev_agent] finish chat, chatRecordId=6de38d04-32bc-456d-bda6-cf35db5aab68, requestId=9af17f57-c143-44bf-9f60-5d1b80a56014, responseMeta={ID:chatcmpl-80241520-5411-9c71-a653-bcf9ea858718 FinishReason:tool_calls Usage:{PromptTokens:12337 CompletionTokens:92 TotalTokens:12429 CompletionTokensDetails:{ReasoningTokens:0} PromptTokensDetails:{CachedTokens:11392}}}
+2026-02-20T13:22:49.980Z	INFO	Successfully updated tool result for chat message with id: 8a921fcc-3307-415e-8e1d-cdaaa341e977
+2026-02-20T13:22:49.981Z	INFO	This request is to securely record 62059 bytes of data
+2026-02-20T13:22:52.715Z	INFO	[common_dev_agent] finish chat, chatRecordId=6de38d04-32bc-456d-bda6-cf35db5aab68, requestId=35d70cf7-f961-49a9-8467-56207dd82176, responseMeta={ID:chatcmpl-a143f3ea-dfb3-9947-a9fe-727aa5c3a899 FinishReason:tool_calls Usage:{PromptTokens:12789 CompletionTokens:97 TotalTokens:12886 CompletionTokensDetails:{ReasoningTokens:0} PromptTokensDetails:{CachedTokens:12288}}}
+2026-02-20T13:22:52.744Z	INFO	Successfully updated tool result for chat message with id: 40462091-b471-4b58-a370-e4ba98ce3540
+2026-02-20T13:22:52.745Z	INFO	This request is to securely record 63896 bytes of data
+2026-02-20T13:22:55.690Z	INFO	Send request snapshot/syncAll CurrentSessionId: 57999a08-4c09-4d75-b5db-adca1abd37b9, CurrentSnapshotId: ebec7908-1eac-4c14-93fd-891d98925676, CurrentSnapshotStatus: INIT, Type: REFRESH_LIST
+2026-02-20T13:22:55.696Z	INFO	Send request snapshot/syncAll CurrentSessionId: 57999a08-4c09-4d75-b5db-adca1abd37b9, CurrentSnapshotId: 77a4fdd0-f876-4e35-9a29-3c9768b45cf2, CurrentSnapshotStatus: INIT, Type: REFRESH_LIST
+2026-02-20T13:22:55.841Z	INFO	Send request snapshot/syncAll CurrentSessionId: 57999a08-4c09-4d75-b5db-adca1abd37b9, CurrentSnapshotId: 77a4fdd0-f876-4e35-9a29-3c9768b45cf2, CurrentSnapshotStatus: GENERATING, Type: REFRESH_CURRENT_STATUS
+2026-02-20T13:22:59.186Z	WARN	[>                        ] 0.00%, Finished/Total: 0/24, WorkspacePath: c:\autonomous-elasticsearch-evolution-agent
+2026-02-20T13:23:09.188Z	WARN	[>                        ] 0.00%, Finished/Total: 0/24, WorkspacePath: c:\autonomous-elasticsearch-evolution-agent
+2026-02-20T13:23:10.111Z	INFO	[common_dev_agent] finish chat, chatRecordId=6de38d04-32bc-456d-bda6-cf35db5aab68, requestId=b612e7bf-1fdd-4b30-aedd-59cdd3b11452, responseMeta={ID:chatcmpl-d492e4c0-e0f0-9192-aaa0-495241456515 FinishReason:tool_calls Usage:{PromptTokens:13064 CompletionTokens:1240 TotalTokens:14304 CompletionTokensDetails:{ReasoningTokens:0} PromptTokensDetails:{CachedTokens:12736}}}
+2026-02-20T13:23:10.137Z	INFO	OperateWorkingSpaceFile file id:846c1557-ab2b-4bd5-9dac-b96a66be3b98, type:APPLY
+2026-02-20T13:23:10.145Z	INFO	OperateWorkingSpaceFile file id:846c1557-ab2b-4bd5-9dac-b96a66be3b98, type:COMPLETE_APPLY
+2026-02-20T13:23:10.552Z	INFO	did open uri:c:\autonomous-elasticsearch-evolution-agent\persistent-memory.js
+2026-02-20T13:23:10.670Z	INFO	index chat text rag engine file count:1
+2026-02-20T13:23:10.701Z	INFO	Send request snapshot/syncAll CurrentSessionId: 57999a08-4c09-4d75-b5db-adca1abd37b9, CurrentSnapshotId: 77a4fdd0-f876-4e35-9a29-3c9768b45cf2, CurrentSnapshotStatus: APPLIED, Type: REFRESH_CURRENT_STATUS
+2026-02-20T13:23:10.726Z	INFO	index batch text retrieve file:1
+2026-02-20T13:23:10.726Z	INFO	need to remove chat vector rag engine file count:0
+2026-02-20T13:23:11.048Z	INFO	Successfully updated tool result for chat message with id: a3058396-2ddf-4529-8cea-0d10d6ce220d
+2026-02-20T13:23:11.049Z	INFO	This request is to securely record 70535 bytes of data
+2026-02-20T13:23:13.505Z	INFO	Send request snapshot/syncAll CurrentSessionId: 57999a08-4c09-4d75-b5db-adca1abd37b9, CurrentSnapshotId: 77a4fdd0-f876-4e35-9a29-3c9768b45cf2, CurrentSnapshotStatus: GENERATING, Type: REFRESH_CURRENT_STATUS
+2026-02-20T13:23:19.188Z	WARN	[>                        ] 0.00%, Finished/Total: 0/24, WorkspacePath: c:\autonomous-elasticsearch-evolution-agent
+2026-02-20T13:23:21.239Z	INFO	OperateWorkingSpaceFile file id:846c1557-ab2b-4bd5-9dac-b96a66be3b98, type:ACCEPT
+2026-02-20T13:23:21.276Z	INFO	did open uri:c:\autonomous-elasticsearch-evolution-agent\elasticsearch-search-optimizer.js
+2026-02-20T13:23:21.382Z	INFO	index chat text rag engine file count:1
+2026-02-20T13:23:21.383Z	INFO	index batch text retrieve file:1
+2026-02-20T13:23:21.383Z	INFO	need to remove chat vector rag engine file count:0
+2026-02-20T13:23:29.194Z	WARN	[>                        ] 0.00%, Finished/Total: 0/24, WorkspacePath: c:\autonomous-elasticsearch-evolution-agent
+2026-02-20T13:23:31.331Z	INFO	[common_dev_agent] finish chat, chatRecordId=6de38d04-32bc-456d-bda6-cf35db5aab68, requestId=8966827b-b8ae-492d-a39e-5fb4257208e1, responseMeta={ID:chatcmpl-44e9299d-fcbe-9a7a-a329-150d1038a1fc FinishReason:tool_calls Usage:{PromptTokens:14352 CompletionTokens:1521 TotalTokens:15873 CompletionTokensDetails:{ReasoningTokens:0} PromptTokensDetails:{CachedTokens:13056}}}
+2026-02-20T13:23:31.356Z	INFO	OperateWorkingSpaceFile file id:73abb61d-7e24-40ac-b721-180d6b052c31, type:APPLY
+2026-02-20T13:23:31.364Z	INFO	OperateWorkingSpaceFile file id:73abb61d-7e24-40ac-b721-180d6b052c31, type:COMPLETE_APPLY
+2026-02-20T13:23:31.398Z	INFO	Send request snapshot/syncAll CurrentSessionId: 57999a08-4c09-4d75-b5db-adca1abd37b9, CurrentSnapshotId: 77a4fdd0-f876-4e35-9a29-3c9768b45cf2, CurrentSnapshotStatus: APPLIED, Type: REFRESH_CURRENT_STATUS
+2026-02-20T13:23:31.441Z	INFO	did open uri:c:\autonomous-elasticsearch-evolution-agent\elasticsearch-search-optimizer.js
+2026-02-20T13:23:31.557Z	INFO	index chat text rag engine file count:1
+2026-02-20T13:23:31.567Z	INFO	did open uri:c:\autonomous-elasticsearch-evolution-agent\elasticsearch-search-optimizer.js
+2026-02-20T13:23:31.604Z	INFO	index batch text retrieve file:1
+2026-02-20T13:23:31.604Z	INFO	need to remove chat vector rag engine file count:1
+2026-02-20T13:23:31.667Z	INFO	index chat text rag engine file count:1
+2026-02-20T13:23:31.667Z	INFO	index batch text retrieve file:1
+2026-02-20T13:23:31.668Z	INFO	need to remove chat vector rag engine file count:0
+2026-02-20T13:23:31.721Z	INFO	Successfully updated tool result for chat message with id: e9f57713-7d0a-47bf-93ff-3ba09df1acdd
+2026-02-20T13:23:31.722Z	INFO	This request is to securely record 78657 bytes of data
+2026-02-20T13:23:32.586Z	INFO	get similar code count:0 cost:2
+2026-02-20T13:23:32.586Z	INFO	finish parse code similar:2.9088ms similars:0
+2026-02-20T13:23:34.011Z	INFO	OperateWorkingSpaceFile file id:73abb61d-7e24-40ac-b721-180d6b052c31, type:ACCEPT
+2026-02-20T13:23:34.025Z	INFO	Send request snapshot/syncAll CurrentSessionId: 57999a08-4c09-4d75-b5db-adca1abd37b9, CurrentSnapshotId: 77a4fdd0-f876-4e35-9a29-3c9768b45cf2, CurrentSnapshotStatus: ACCEPTED, Type: REFRESH_CURRENT_STATUS
+2026-02-20T13:23:34.058Z	INFO	did open uri:c:\autonomous-elasticsearch-evolution-agent\elasticsearch-search-optimizer.js
+2026-02-20T13:23:34.166Z	INFO	index chat text rag engine file count:1
+2026-02-20T13:23:34.167Z	INFO	index batch text retrieve file:1
+2026-02-20T13:23:34.167Z	INFO	need to remove chat vector rag engine file count:0
+2026-02-20T13:23:35.217Z	INFO	Send request snapshot/syncAll CurrentSessionId: 57999a08-4c09-4d75-b5db-adca1abd37b9, CurrentSnapshotId: 77a4fdd0-f876-4e35-9a29-3c9768b45cf2, CurrentSnapshotStatus: GENERATING, Type: REFRESH_CURRENT_STATUS
+2026-02-20T13:23:39.198Z	WARN	[==========>              ] 41.67%, Finished/Total: 10/24, WorkspacePath: c:\autonomous-elasticsearch-evolution-agent
+2026-02-20T13:23:46.038Z	INFO	Reported 54/54 events
+2026-02-20T13:23:47.696Z	INFO	current login user not open downloadNodeVm
+2026-02-20T13:23:49.199Z	WARN	[==========>              ] 41.67%, Finished/Total: 10/24, WorkspacePath: c:\autonomous-elasticsearch-evolution-agent
+2026-02-20T13:23:55.288Z	INFO	[common_dev_agent] finish chat, chatRecordId=6de38d04-32bc-456d-bda6-cf35db5aab68, requestId=16ddfb2a-6d71-4b90-b059-aa6b760fa2cf, responseMeta={ID:chatcmpl-77c43341-f0d5-9460-b54a-35458a3c01c4 FinishReason:tool_calls Usage:{PromptTokens:15921 CompletionTokens:2150 TotalTokens:18071 CompletionTokensDetails:{ReasoningTokens:0} PromptTokensDetails:{CachedTokens:14336}}}
+2026-02-20T13:23:55.351Z	INFO	OperateWorkingSpaceFile file id:f7ed1e7b-c8e0-4534-bd7f-6d4ea2e515bd, type:APPLY
+2026-02-20T13:23:55.369Z	INFO	OperateWorkingSpaceFile file id:f7ed1e7b-c8e0-4534-bd7f-6d4ea2e515bd, type:COMPLETE_APPLY
+2026-02-20T13:23:55.415Z	INFO	Send request snapshot/syncAll CurrentSessionId: 57999a08-4c09-4d75-b5db-adca1abd37b9, CurrentSnapshotId: 77a4fdd0-f876-4e35-9a29-3c9768b45cf2, CurrentSnapshotStatus: APPLIED, Type: REFRESH_CURRENT_STATUS
+2026-02-20T13:23:55.752Z	INFO	Successfully updated tool result for chat message with id: 06c33975-0c4b-4652-9772-ea34fceebaee
+2026-02-20T13:23:55.753Z	INFO	This request is to securely record 89785 bytes of data
+2026-02-20T13:23:58.051Z	INFO	Send request snapshot/syncAll CurrentSessionId: 57999a08-4c09-4d75-b5db-adca1abd37b9, CurrentSnapshotId: 77a4fdd0-f876-4e35-9a29-3c9768b45cf2, CurrentSnapshotStatus: GENERATING, Type: REFRESH_CURRENT_STATUS
+2026-02-20T13:23:59.205Z	WARN	[==========>              ] 41.67%, Finished/Total: 10/24, WorkspacePath: c:\autonomous-elasticsearch-evolution-agent
+2026-02-20T13:24:04.479Z	INFO	[common_dev_agent] finish chat, chatRecordId=6de38d04-32bc-456d-bda6-cf35db5aab68, requestId=477dc40a-317f-43fa-8787-903e441c032a, responseMeta={ID:chatcmpl-553d7394-7dd0-9eb3-8bf0-69f09cd15936 FinishReason:tool_calls Usage:{PromptTokens:18120 CompletionTokens:617 TotalTokens:18737 CompletionTokensDetails:{ReasoningTokens:0} PromptTokensDetails:{CachedTokens:15872}}}
+2026-02-20T13:24:04.498Z	INFO	OperateWorkingSpaceFile file id:8da05b01-d90c-4b5c-ab79-70119c4919f2, type:APPLY
+2026-02-20T13:24:04.509Z	INFO	OperateWorkingSpaceFile file id:8da05b01-d90c-4b5c-ab79-70119c4919f2, type:COMPLETE_APPLY
+2026-02-20T13:24:04.542Z	INFO	Send request snapshot/syncAll CurrentSessionId: 57999a08-4c09-4d75-b5db-adca1abd37b9, CurrentSnapshotId: 77a4fdd0-f876-4e35-9a29-3c9768b45cf2, CurrentSnapshotStatus: APPLIED, Type: REFRESH_CURRENT_STATUS
+2026-02-20T13:24:04.858Z	INFO	Successfully updated tool result for chat message with id: 7b5637e0-3d00-4a90-85d8-137fa3828891
+2026-02-20T13:24:04.861Z	INFO	This request is to securely record 93740 bytes of data
+2026-02-20T13:24:08.767Z	INFO	Send request snapshot/syncAll CurrentSessionId: 57999a08-4c09-4d75-b5db-adca1abd37b9, CurrentSnapshotId: 77a4fdd0-f876-4e35-9a29-3c9768b45cf2, CurrentSnapshotStatus: GENERATING, Type: REFRESH_CURRENT_STATUS
+2026-02-20T13:24:09.207Z	WARN	[====================>    ] 83.33%, Finished/Total: 20/24, WorkspacePath: c:\autonomous-elasticsearch-evolution-agent
+2026-02-20T13:24:19.222Z	WARN	[====================>    ] 83.33%, Finished/Total: 20/24, WorkspacePath: c:\autonomous-elasticsearch-evolution-agent
+2026-02-20T13:24:23.587Z	INFO	[common_dev_agent] finish chat, chatRecordId=6de38d04-32bc-456d-bda6-cf35db5aab68, requestId=678400e2-1875-4312-84ae-4eb50092fdaa, responseMeta={ID:chatcmpl-a6b531eb-c785-9c98-b613-8f2d74f6812d FinishReason:tool_calls Usage:{PromptTokens:18786 CompletionTokens:1177 TotalTokens:19963 CompletionTokensDetails:{ReasoningTokens:0} PromptTokensDetails:{CachedTokens:18112}}}
+2026-02-20T13:24:23.632Z	INFO	OperateWorkingSpaceFile file id:02445eba-c741-405b-9d2b-366d051c2acb, type:APPLY
+2026-02-20T13:24:23.655Z	INFO	OperateWorkingSpaceFile file id:02445eba-c741-405b-9d2b-366d051c2acb, type:COMPLETE_APPLY
+2026-02-20T13:24:23.697Z	INFO	Send request snapshot/syncAll CurrentSessionId: 57999a08-4c09-4d75-b5db-adca1abd37b9, CurrentSnapshotId: 77a4fdd0-f876-4e35-9a29-3c9768b45cf2, CurrentSnapshotStatus: APPLIED, Type: REFRESH_CURRENT_STATUS
+2026-02-20T13:24:24.024Z	INFO	Successfully updated tool result for chat message with id: 4282a2f4-ce07-4ebd-a3ac-7540552bc1f3
+2026-02-20T13:24:24.026Z	INFO	This request is to securely record 100493 bytes of data
+2026-02-20T13:24:26.884Z	ERROR	Failed to call workingSpaceFile/sync: , error: Request workingSpaceFile/sync failed with message: cannot open file:///c%3A/autonomous-elasticsearch-evolution-agent/memory-inspector.js. Detail: Unable to read file 'c:\autonomous-elasticsearch-evolution-agent\memory-inspector.js' (Error: Unable to resolve nonexistent file 'c:\autonomous-elasticsearch-evolution-agent\memory-inspector.js')
+2026-02-20T13:24:26.884Z	ERROR	send request snapshot/syncAll error:Request workingSpaceFile/sync failed with message: cannot open file:///c%3A/autonomous-elasticsearch-evolution-agent/memory-inspector.js. Detail: Unable to read file 'c:\autonomous-elasticsearch-evolution-agent\memory-inspector.js' (Error: Unable to resolve nonexistent file 'c:\autonomous-elasticsearch-evolution-agent\memory-inspector.js')
+2026-02-20T13:24:26.888Z	INFO	Send request snapshot/syncAll CurrentSessionId: 57999a08-4c09-4d75-b5db-adca1abd37b9, CurrentSnapshotId: 77a4fdd0-f876-4e35-9a29-3c9768b45cf2, CurrentSnapshotStatus: GENERATING, Type: REFRESH_CURRENT_STATUS
+2026-02-20T13:24:29.230Z	WARN	[========================>] 100.00%, Finished/Total: 24/24, WorkspacePath: c:\autonomous-elasticsearch-evolution-agent
+2026-02-20T13:24:29.230Z	WARN	[codebase] [vector index building success], workspacePath: c:\autonomous-elasticsearch-evolution-agent, total cost time: 120.257314s, total index file count: 24

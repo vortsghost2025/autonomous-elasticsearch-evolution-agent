@@ -1,5 +1,40 @@
+import { Client } from '@elastic/elasticsearch';
+import { ElasticsearchSearchOptimizer } from './elasticsearch-search-optimizer.js';
+import { ElasticsearchMetricsCollector } from './elasticsearch-metrics-collector.js';
+import { PersistentMemory } from './persistent-memory.js';
+
 console.log("Autonomous Elasticsearch Evolution Agent");
 console.log("14-Phase Autonomous Architecture Demo");
+
+// Initialize persistent memory
+const persistentMemory = new PersistentMemory({ 
+  storagePath: './memory-store.json' 
+});
+
+try {
+  await persistentMemory.load();
+  console.log("Persistent memory initialized successfully");
+} catch (error) {
+  console.error("Failed to initialize persistent memory:", error);
+}
+
+// Create ES client (using fake connection for demo purposes)
+const esClient = new Client({ node: 'http://localhost:9200' });
+
+// Initialize components with persistent memory
+const metricsCollector = new ElasticsearchMetricsCollector(esClient, { 
+  clusterName: 'demo-cluster',
+  persistentMemory: persistentMemory
+});
+
+const optimizer = new ElasticsearchSearchOptimizer(esClient, { 
+  clusterName: 'demo-cluster', 
+  autonomyLevel: 'supervised',
+  persistentMemory: persistentMemory
+});
+
+const initialMetrics = await metricsCollector.collectMetrics();
+
 console.log("");
 console.log("INITIAL CLUSTER STATE (Degraded):");
 console.log("  Query Latency:      1250ms (target: 500ms)");
@@ -38,6 +73,11 @@ console.log("  PUT /*/_settings (compression)");
 console.log("  POST /_cluster/reroute");
 console.log("  Status: Commands executed successfully");
 console.log("");
+
+// Run an actual optimization cycle to demonstrate the system
+await optimizer.runPhase9Cycle('demo-cycle-1', initialMetrics);
+
+console.log("");
 console.log("RESULTS (After Autonomous Optimization):");
 console.log("================================================================================");
 console.log("  Query Latency:        1250ms -> 725ms         (DOWN 42%)");
@@ -53,5 +93,16 @@ console.log("  Broadcasting to 2 clusters...");
 console.log("  Status: Pattern applied to all cluster replicas");
 console.log("");
 console.log("AUTONOMOUS OPTIMIZATION COMPLETE");
+
+// Show how many optimizations have been stored in persistent memory
+const history = await persistentMemory.getOptimizationHistory();
+console.log(`Total optimizations stored in persistent memory: ${history.length}`);
+
+// Show how many errors have been logged
+const errors = await persistentMemory.getErrorLog();
+console.log(`Total errors logged in persistent memory: ${errors.length}`);
+
 console.log("All constraints satisfied. Rollback available for 5 minutes.");
 console.log("The future of infrastructure is autonomous.");
+console.log("");
+console.log("Persistent memory system active. Data will persist between agent restarts.");

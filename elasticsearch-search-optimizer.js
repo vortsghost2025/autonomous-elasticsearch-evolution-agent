@@ -4,6 +4,8 @@
  * Implements 14-phase autonomous architecture
  */
 
+import PersistentMemory from './persistent-memory.js';
+
 export class ElasticsearchSearchOptimizer {
   constructor(esClient, options = {}) {
     this.esClient = esClient;
@@ -11,9 +13,36 @@ export class ElasticsearchSearchOptimizer {
     this.autonomyLevel = options.autonomyLevel || 'supervised';
     this.lastOptimization = null;
     this.optimizationHistory = [];
+    this.persistentMemory = options.persistentMemory || new PersistentMemory(options.memoryOptions);
+    this.isInitialized = false;
+  }
+
+  async initialize() {
+    if (this.isInitialized) return;
+    
+    try {
+      // Load agent state from persistent memory
+      const savedState = await this.persistentMemory.retrieveAgentState();
+      if (savedState && savedState.optimizationHistory) {
+        this.optimizationHistory = savedState.optimizationHistory;
+        this.lastOptimization = savedState.lastOptimization || null;
+        console.log(`[ElasticsearchSearchOptimizer] Restored ${this.optimizationHistory.length} historical optimizations`);
+      }
+      
+      this.isInitialized = true;
+      console.log('[ElasticsearchSearchOptimizer] Initialized with persistent memory');
+    } catch (error) {
+      console.error('[ElasticsearchSearchOptimizer] Error during initialization:', error);
+      // Continue anyway, we don't want to crash if memory restore fails
+      this.isInitialized = true;
+    }
   }
 
   async runPhase9Cycle(cycleId, input = {}) {
+    if (!this.isInitialized) {
+      await this.initialize();
+    }
+
     try {
       // Phase 8: Analyze
       const analysis = this.phase8AnalyzeArchitecture(input);
@@ -37,8 +66,19 @@ export class ElasticsearchSearchOptimizer {
       this.optimizationHistory.push(cycleResult);
       this.lastOptimization = cycleResult;
 
+      // Persist the optimization to memory
+      await this.persistentMemory.addToOptimizationHistory(cycleResult);
+
+      // Store the updated agent state
+      await this.persistentMemory.storeAgentState({
+        lastOptimization: this.lastOptimization,
+        optimizationHistory: this.optimizationHistory
+      });
+
       return { success: true, cycleResult, agentId: this.clusterName };
     } catch (error) {
+      // Log the error to persistent memory
+      await this.persistentMemory.logError(error);
       return { success: false, error: error.message, agentId: this.clusterName };
     }
   }
@@ -119,12 +159,17 @@ export class ElasticsearchSearchOptimizer {
     };
   }
 
-  getStatus() {
+  async getStatus() {
+    if (!this.isInitialized) {
+      await this.initialize();
+    }
+    
     return {
       clusterName: this.clusterName,
       autonomyLevel: this.autonomyLevel,
       lastOptimization: this.lastOptimization,
-      optimizationCount: this.optimizationHistory.length
+      optimizationCount: this.optimizationHistory.length,
+      isInitialized: this.isInitialized
     };
   }
 
@@ -139,14 +184,21 @@ export class ElasticsearchSearchOptimizer {
 
   acceptFederationPattern(pattern) {
     console.log(`[${this.clusterName}] Received pattern: ${pattern.name}`);
+    // Store learned patterns in persistent memory
+    this.persistentMemory.storeLearnedPattern(pattern);
   }
 
-  getHealthStatus() {
+  async getHealthStatus() {
+    if (!this.isInitialized) {
+      await this.initialize();
+    }
+    
     return {
       agentId: this.clusterName,
       isHealthy: true,
       isCritical: false,
-      lastCheck: Date.now()
+      lastCheck: Date.now(),
+      memoryStatus: await this.persistentMemory.get('healthStatus', 'OK')
     };
   }
 }
