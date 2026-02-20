@@ -34,3 +34,16 @@
 2026-02-20 08:17:52 info: Lingma connected to language server successfully.
 2026-02-20 08:17:52 info: auth status synced. id=, status=1, whitelist=1, token=
 2026-02-20 08:17:55 info: try to create ws connection
+2026-02-20 08:27:35 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 08:27:35 info: try to create ws connection
+2026-02-20 08:37:35 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 08:37:35 info: try to create ws connection
+2026-02-20 08:47:35 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 08:47:35 info: try to create ws connection
+2026-02-20 08:50:04 info: upload image: 8:50:4
+2026-02-20 08:50:05 info: get Image: {"requestId":"","errorCode":"","errorMessage":"","result":{"imageUrl":"https://lingma.alibabacloud.com/algo/api/v2/image/get?filePath=dedicated/38-R69G38ASi6OMjStaNesN6e__jDW2LpPUqrll0asg/26f8856e-d284-410a-9915-d3bb2c03f1b2_1771595405181.png","requestId":"11992d81-11b3-4985-9794-b246fbe5a5a9"}}
+2026-02-20 08:50:05 info: get Image success: 8:50:5
+2026-02-20 08:57:35 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 08:57:35 info: try to create ws connection
+2026-02-20 09:07:35 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 09:07:35 info: try to create ws connection
