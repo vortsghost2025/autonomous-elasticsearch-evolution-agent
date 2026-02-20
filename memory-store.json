@@ -59,6 +59,2440 @@
       "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Indices.stats (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/indices.js:4493:16)\n    at async ElasticsearchMetricsCollector.getIndexStats (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:165:22)\n    at async Promise.all (index 2)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/demo.js:36:24",
       "timestamp": 1771600804320,
       "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_nodes/stats",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 2
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 1.5289
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Nodes.stats (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/nodes.js:421:16)\n    at async ElasticsearchMetricsCollector.getNodeStats (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:134:22)\n    at async Promise.all (index 1)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771602334297,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_nodes/stats",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 5
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 1.7939
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Nodes.stats (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/nodes.js:421:16)\n    at async ElasticsearchMetricsCollector.getNodeStats (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:134:22)\n    at async Promise.all (index 1)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771602393797,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_nodes/stats",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 8
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 1.6266
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Nodes.stats (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/nodes.js:421:16)\n    at async ElasticsearchMetricsCollector.getNodeStats (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:134:22)\n    at async Promise.all (index 1)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771602454781,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_stats",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 12
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 1.2781
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Indices.stats (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/indices.js:4493:16)\n    at async ElasticsearchMetricsCollector.getIndexStats (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:165:22)\n    at async Promise.all (index 2)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771602513450,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_stats",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 15
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 1.7215
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Indices.stats (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/indices.js:4493:16)\n    at async ElasticsearchMetricsCollector.getIndexStats (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:165:22)\n    at async Promise.all (index 2)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771602572237,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_cluster/health",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 16
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 1.4339
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Cluster.health (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/cluster.js:521:16)\n    at async ElasticsearchMetricsCollector.getClusterHealth (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:114:22)\n    at async Promise.all (index 0)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771602634224,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_cluster/health",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 19
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 1.0744
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Cluster.health (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/cluster.js:521:16)\n    at async ElasticsearchMetricsCollector.getClusterHealth (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:114:22)\n    at async Promise.all (index 0)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771602692771,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_cluster/health",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 22
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 1.6286
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Cluster.health (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/cluster.js:521:16)\n    at async ElasticsearchMetricsCollector.getClusterHealth (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:114:22)\n    at async Promise.all (index 0)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771602753924,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_nodes/stats",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 26
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 1.4072
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Nodes.stats (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/nodes.js:421:16)\n    at async ElasticsearchMetricsCollector.getNodeStats (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:134:22)\n    at async Promise.all (index 1)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771602813844,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_nodes/stats",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 29
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 1.5411
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Nodes.stats (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/nodes.js:421:16)\n    at async ElasticsearchMetricsCollector.getNodeStats (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:134:22)\n    at async Promise.all (index 1)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771602873712,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_nodes/stats",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 32
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 0.972
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Nodes.stats (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/nodes.js:421:16)\n    at async ElasticsearchMetricsCollector.getNodeStats (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:134:22)\n    at async Promise.all (index 1)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771602933429,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_stats",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 36
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 1.1148
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Indices.stats (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/indices.js:4493:16)\n    at async ElasticsearchMetricsCollector.getIndexStats (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:165:22)\n    at async Promise.all (index 2)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771602993216,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_stats",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 39
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 1.3913
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Indices.stats (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/indices.js:4493:16)\n    at async ElasticsearchMetricsCollector.getIndexStats (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:165:22)\n    at async Promise.all (index 2)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771603053468,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_nodes/stats",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 41
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 2.186
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Nodes.stats (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/nodes.js:421:16)\n    at async ElasticsearchMetricsCollector.getNodeStats (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:134:22)\n    at async Promise.all (index 1)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771603113221,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_nodes/stats",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 44
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 1.2956
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Nodes.stats (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/nodes.js:421:16)\n    at async ElasticsearchMetricsCollector.getNodeStats (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:134:22)\n    at async Promise.all (index 1)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771603174056,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_cluster/health",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 46
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 1.6158
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Cluster.health (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/cluster.js:521:16)\n    at async ElasticsearchMetricsCollector.getClusterHealth (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:114:22)\n    at async Promise.all (index 0)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771603232791,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_cluster/health",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 49
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 1.1394
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Cluster.health (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/cluster.js:521:16)\n    at async ElasticsearchMetricsCollector.getClusterHealth (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:114:22)\n    at async Promise.all (index 0)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771603293642,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_stats",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 54
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 1.9177
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Indices.stats (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/indices.js:4493:16)\n    at async ElasticsearchMetricsCollector.getIndexStats (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:165:22)\n    at async Promise.all (index 2)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771603354041,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_cluster/health",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 55
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 1.0434
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Cluster.health (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/cluster.js:521:16)\n    at async ElasticsearchMetricsCollector.getClusterHealth (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:114:22)\n    at async Promise.all (index 0)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771603413428,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_nodes/stats",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 59
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 1.2392
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Nodes.stats (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/nodes.js:421:16)\n    at async ElasticsearchMetricsCollector.getNodeStats (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:134:22)\n    at async Promise.all (index 1)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771603473081,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_cluster/health",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 61
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 1.2571
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Cluster.health (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/cluster.js:521:16)\n    at async ElasticsearchMetricsCollector.getClusterHealth (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:114:22)\n    at async Promise.all (index 0)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771603533650,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_cluster/health",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 64
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 1.1114
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Cluster.health (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/cluster.js:521:16)\n    at async ElasticsearchMetricsCollector.getClusterHealth (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:114:22)\n    at async Promise.all (index 0)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771603593983,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_cluster/health",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 67
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 1.1001
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Cluster.health (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/cluster.js:521:16)\n    at async ElasticsearchMetricsCollector.getClusterHealth (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:114:22)\n    at async Promise.all (index 0)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771603654136,
+      "type": "ERROR"
+    },
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_cluster/health",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 70
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 0.9844
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Cluster.health (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/cluster.js:521:16)\n    at async ElasticsearchMetricsCollector.getClusterHealth (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:114:22)\n    at async Promise.all (index 0)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async Timeout._onTimeout (file:///C:/autonomous-elasticsearch-evolution-agent/server.js:263:21)",
+      "timestamp": 1771603713690,
+      "type": "ERROR"
     }
-  ]
+  ],
+  "optimizationHistory": [
+    {
+      "cycleId": "initial-cycle",
+      "strategy": {
+        "name": "BALANCED",
+        "parameters": {
+          "aggressiveness": 0.7,
+          "riskTolerance": 0.6
+        }
+      },
+      "analysis": {
+        "timestamp": 1771602267022,
+        "healthStatus": "unknown",
+        "issues": [],
+        "opportunities": [],
+        "urgencyLevel": "MEDIUM"
+      },
+      "proposals": [
+        {
+          "rank": 1,
+          "title": "Shard Rebalancing",
+          "description": "Redistribute shards for better load balancing",
+          "estimatedImprovement": 0.46630898280683913,
+          "estimatedMemorySavings": 0.13989269484205175,
+          "riskLevel": "LOW",
+          "confidence": 0.9,
+          "operations": [
+            {
+              "type": "reroute",
+              "target": "unbalanced_shards",
+              "params": {
+                "move_factor": 0.3
+              }
+            },
+            {
+              "type": "allocation_update",
+              "target": "nodes",
+              "params": {
+                "balance_factor": 0.85
+              }
+            }
+          ],
+          "estimatedDuration": "5-15 mins"
+        },
+        {
+          "rank": 2,
+          "title": "Memory Optimization",
+          "description": "Adjust JVM settings and caching strategies",
+          "estimatedImprovement": 0.46304297706615066,
+          "estimatedMemorySavings": 0.1389128931198452,
+          "riskLevel": "LOW",
+          "confidence": 0.9,
+          "operations": [
+            {
+              "type": "cache_settings",
+              "target": "query_cache",
+              "params": {
+                "max_size": "20%"
+              }
+            },
+            {
+              "type": "refresh_interval",
+              "target": "high_write_indexes",
+              "params": {
+                "interval": "30s"
+              }
+            }
+          ],
+          "estimatedDuration": "2-5 mins"
+        },
+        {
+          "rank": 3,
+          "title": "Aggressive Index Merging",
+          "description": "Merge all small indexes to reduce fragmentation",
+          "estimatedImprovement": 0.450346354734566,
+          "estimatedMemorySavings": 0.1351039064203698,
+          "riskLevel": "MEDIUM",
+          "confidence": 0.75,
+          "operations": [
+            {
+              "type": "force_merge",
+              "target": "small_indexes",
+              "params": {
+                "maxNumSegments": 1
+              }
+            },
+            {
+              "type": "cache_warmup",
+              "target": "merged_indexes"
+            }
+          ],
+          "estimatedDuration": "15-45 mins"
+        },
+        {
+          "rank": 4,
+          "title": "ILM Optimization",
+          "description": "Optimize index lifecycle policies",
+          "estimatedImprovement": 0.4448126737825443,
+          "estimatedMemorySavings": 0.13344380213476328,
+          "riskLevel": "MINIMAL",
+          "confidence": 0.95,
+          "operations": [
+            {
+              "type": "update_ilm_policy",
+              "target": "time_series_indices",
+              "params": {
+                "rollover_size": "10GB",
+                "rollover_age": "1d"
+              }
+            },
+            {
+              "type": "optimize_for_search",
+              "target": "read_only_indices"
+            }
+          ],
+          "estimatedDuration": "5-10 mins"
+        },
+        {
+          "rank": 5,
+          "title": "Query Pattern Optimization",
+          "description": "Analyze and optimize frequently used queries",
+          "estimatedImprovement": 0.43691763919443827,
+          "estimatedMemorySavings": 0.13107529175833146,
+          "riskLevel": "MINIMAL",
+          "confidence": 0.95,
+          "operations": [
+            {
+              "type": "analyze_slow_queries",
+              "target": "query_log"
+            },
+            {
+              "type": "create_optimized_mappings",
+              "target": "frequently_queried_fields"
+            },
+            {
+              "type": "setup_field_caps_cache",
+              "target": "frequently_accessed_indices"
+            }
+          ],
+          "estimatedDuration": "10-20 mins"
+        }
+      ],
+      "approvedProposal": {
+        "rank": 1,
+        "title": "Shard Rebalancing",
+        "description": "Redistribute shards for better load balancing",
+        "estimatedImprovement": 0.46630898280683913,
+        "estimatedMemorySavings": 0.13989269484205175,
+        "riskLevel": "LOW",
+        "confidence": 0.9,
+        "operations": [
+          {
+            "type": "reroute",
+            "target": "unbalanced_shards",
+            "params": {
+              "move_factor": 0.3
+            }
+          },
+          {
+            "type": "allocation_update",
+            "target": "nodes",
+            "params": {
+              "balance_factor": 0.85
+            }
+          }
+        ],
+        "estimatedDuration": "5-15 mins"
+      },
+      "result": {
+        "success": false
+      },
+      "simulationResults": [
+        {
+          "id": "sim_1771602267022_8202",
+          "name": "Shard Rebalancing",
+          "description": "Redistribute shards for better load balancing",
+          "operations": [
+            {
+              "type": "reroute",
+              "target": "unbalanced_shards",
+              "params": {
+                "move_factor": 0.3
+              }
+            },
+            {
+              "type": "allocation_update",
+              "target": "nodes",
+              "params": {
+                "balance_factor": 0.85
+              }
+            }
+          ],
+          "predictedImprovement": 0.46630898280683913,
+          "riskLevel": "LOW",
+          "estimatedDuration": "5-15 mins",
+          "resourceImpact": {
+            "cpu": 0.3,
+            "io": 0.4,
+            "network": 0.7
+          },
+          "confidence": 0.9,
+          "simulatedAt": 1771602267022
+        },
+        {
+          "id": "sim_1771602267022_3220",
+          "name": "Memory Optimization",
+          "description": "Adjust JVM settings and caching strategies",
+          "operations": [
+            {
+              "type": "cache_settings",
+              "target": "query_cache",
+              "params": {
+                "max_size": "20%"
+              }
+            },
+            {
+              "type": "refresh_interval",
+              "target": "high_write_indexes",
+              "params": {
+                "interval": "30s"
+              }
+            }
+          ],
+          "predictedImprovement": 0.46304297706615066,
+          "riskLevel": "LOW",
+          "estimatedDuration": "2-5 mins",
+          "resourceImpact": {
+            "cpu": 0.1,
+            "io": 0.1,
+            "network": 0.1
+          },
+          "confidence": 0.9,
+          "simulatedAt": 1771602267022
+        },
+        {
+          "id": "sim_1771602267022_7098",
+          "name": "Aggressive Index Merging",
+          "description": "Merge all small indexes to reduce fragmentation",
+          "operations": [
+            {
+              "type": "force_merge",
+              "target": "small_indexes",
+              "params": {
+                "maxNumSegments": 1
+              }
+            },
+            {
+              "type": "cache_warmup",
+              "target": "merged_indexes"
+            }
+          ],
+          "predictedImprovement": 0.450346354734566,
+          "riskLevel": "MEDIUM",
+          "estimatedDuration": "15-45 mins",
+          "resourceImpact": {
+            "cpu": 0.8,
+            "io": 0.9,
+            "network": 0.3
+          },
+          "confidence": 0.75,
+          "simulatedAt": 1771602267022
+        },
+        {
+          "id": "sim_1771602267022_7501",
+          "name": "ILM Optimization",
+          "description": "Optimize index lifecycle policies",
+          "operations": [
+            {
+              "type": "update_ilm_policy",
+              "target": "time_series_indices",
+              "params": {
+                "rollover_size": "10GB",
+                "rollover_age": "1d"
+              }
+            },
+            {
+              "type": "optimize_for_search",
+              "target": "read_only_indices"
+            }
+          ],
+          "predictedImprovement": 0.4448126737825443,
+          "riskLevel": "MINIMAL",
+          "estimatedDuration": "5-10 mins",
+          "resourceImpact": {
+            "cpu": 0.1,
+            "io": 0.2,
+            "network": 0.1
+          },
+          "confidence": 0.95,
+          "simulatedAt": 1771602267022
+        },
+        {
+          "id": "sim_1771602267022_6650",
+          "name": "Query Pattern Optimization",
+          "description": "Analyze and optimize frequently used queries",
+          "operations": [
+            {
+              "type": "analyze_slow_queries",
+              "target": "query_log"
+            },
+            {
+              "type": "create_optimized_mappings",
+              "target": "frequently_queried_fields"
+            },
+            {
+              "type": "setup_field_caps_cache",
+              "target": "frequently_accessed_indices"
+            }
+          ],
+          "predictedImprovement": 0.43691763919443827,
+          "riskLevel": "MINIMAL",
+          "estimatedDuration": "10-20 mins",
+          "resourceImpact": {
+            "cpu": 0.2,
+            "io": 0.3,
+            "network": 0.4
+          },
+          "confidence": 0.95,
+          "simulatedAt": 1771602267022
+        }
+      ],
+      "timestamp": 1771602267023,
+      "mlPrediction": {
+        "predictedImprovement": null,
+        "confidence": 0.9,
+        "riskAdjustedImprovement": null,
+        "estimatedTimeToAchieve": "1-5 minutes",
+        "probabilityOfSuccess": 0.81
+      }
+    }
+  ],
+  "agentState": {
+    "lastOptimization": {
+      "cycleId": "initial-cycle",
+      "strategy": {
+        "name": "BALANCED",
+        "parameters": {
+          "aggressiveness": 0.7,
+          "riskTolerance": 0.6
+        }
+      },
+      "analysis": {
+        "timestamp": 1771602267022,
+        "healthStatus": "unknown",
+        "issues": [],
+        "opportunities": [],
+        "urgencyLevel": "MEDIUM"
+      },
+      "proposals": [
+        {
+          "rank": 1,
+          "title": "Shard Rebalancing",
+          "description": "Redistribute shards for better load balancing",
+          "estimatedImprovement": 0.46630898280683913,
+          "estimatedMemorySavings": 0.13989269484205175,
+          "riskLevel": "LOW",
+          "confidence": 0.9,
+          "operations": [
+            {
+              "type": "reroute",
+              "target": "unbalanced_shards",
+              "params": {
+                "move_factor": 0.3
+              }
+            },
+            {
+              "type": "allocation_update",
+              "target": "nodes",
+              "params": {
+                "balance_factor": 0.85
+              }
+            }
+          ],
+          "estimatedDuration": "5-15 mins"
+        },
+        {
+          "rank": 2,
+          "title": "Memory Optimization",
+          "description": "Adjust JVM settings and caching strategies",
+          "estimatedImprovement": 0.46304297706615066,
+          "estimatedMemorySavings": 0.1389128931198452,
+          "riskLevel": "LOW",
+          "confidence": 0.9,
+          "operations": [
+            {
+              "type": "cache_settings",
+              "target": "query_cache",
+              "params": {
+                "max_size": "20%"
+              }
+            },
+            {
+              "type": "refresh_interval",
+              "target": "high_write_indexes",
+              "params": {
+                "interval": "30s"
+              }
+            }
+          ],
+          "estimatedDuration": "2-5 mins"
+        },
+        {
+          "rank": 3,
+          "title": "Aggressive Index Merging",
+          "description": "Merge all small indexes to reduce fragmentation",
+          "estimatedImprovement": 0.450346354734566,
+          "estimatedMemorySavings": 0.1351039064203698,
+          "riskLevel": "MEDIUM",
+          "confidence": 0.75,
+          "operations": [
+            {
+              "type": "force_merge",
+              "target": "small_indexes",
+              "params": {
+                "maxNumSegments": 1
+              }
+            },
+            {
+              "type": "cache_warmup",
+              "target": "merged_indexes"
+            }
+          ],
+          "estimatedDuration": "15-45 mins"
+        },
+        {
+          "rank": 4,
+          "title": "ILM Optimization",
+          "description": "Optimize index lifecycle policies",
+          "estimatedImprovement": 0.4448126737825443,
+          "estimatedMemorySavings": 0.13344380213476328,
+          "riskLevel": "MINIMAL",
+          "confidence": 0.95,
+          "operations": [
+            {
+              "type": "update_ilm_policy",
+              "target": "time_series_indices",
+              "params": {
+                "rollover_size": "10GB",
+                "rollover_age": "1d"
+              }
+            },
+            {
+              "type": "optimize_for_search",
+              "target": "read_only_indices"
+            }
+          ],
+          "estimatedDuration": "5-10 mins"
+        },
+        {
+          "rank": 5,
+          "title": "Query Pattern Optimization",
+          "description": "Analyze and optimize frequently used queries",
+          "estimatedImprovement": 0.43691763919443827,
+          "estimatedMemorySavings": 0.13107529175833146,
+          "riskLevel": "MINIMAL",
+          "confidence": 0.95,
+          "operations": [
+            {
+              "type": "analyze_slow_queries",
+              "target": "query_log"
+            },
+            {
+              "type": "create_optimized_mappings",
+              "target": "frequently_queried_fields"
+            },
+            {
+              "type": "setup_field_caps_cache",
+              "target": "frequently_accessed_indices"
+            }
+          ],
+          "estimatedDuration": "10-20 mins"
+        }
+      ],
+      "approvedProposal": {
+        "rank": 1,
+        "title": "Shard Rebalancing",
+        "description": "Redistribute shards for better load balancing",
+        "estimatedImprovement": 0.46630898280683913,
+        "estimatedMemorySavings": 0.13989269484205175,
+        "riskLevel": "LOW",
+        "confidence": 0.9,
+        "operations": [
+          {
+            "type": "reroute",
+            "target": "unbalanced_shards",
+            "params": {
+              "move_factor": 0.3
+            }
+          },
+          {
+            "type": "allocation_update",
+            "target": "nodes",
+            "params": {
+              "balance_factor": 0.85
+            }
+          }
+        ],
+        "estimatedDuration": "5-15 mins"
+      },
+      "result": {
+        "success": false
+      },
+      "simulationResults": [
+        {
+          "id": "sim_1771602267022_8202",
+          "name": "Shard Rebalancing",
+          "description": "Redistribute shards for better load balancing",
+          "operations": [
+            {
+              "type": "reroute",
+              "target": "unbalanced_shards",
+              "params": {
+                "move_factor": 0.3
+              }
+            },
+            {
+              "type": "allocation_update",
+              "target": "nodes",
+              "params": {
+                "balance_factor": 0.85
+              }
+            }
+          ],
+          "predictedImprovement": 0.46630898280683913,
+          "riskLevel": "LOW",
+          "estimatedDuration": "5-15 mins",
+          "resourceImpact": {
+            "cpu": 0.3,
+            "io": 0.4,
+            "network": 0.7
+          },
+          "confidence": 0.9,
+          "simulatedAt": 1771602267022
+        },
+        {
+          "id": "sim_1771602267022_3220",
+          "name": "Memory Optimization",
+          "description": "Adjust JVM settings and caching strategies",
+          "operations": [
+            {
+              "type": "cache_settings",
+              "target": "query_cache",
+              "params": {
+                "max_size": "20%"
+              }
+            },
+            {
+              "type": "refresh_interval",
+              "target": "high_write_indexes",
+              "params": {
+                "interval": "30s"
+              }
+            }
+          ],
+          "predictedImprovement": 0.46304297706615066,
+          "riskLevel": "LOW",
+          "estimatedDuration": "2-5 mins",
+          "resourceImpact": {
+            "cpu": 0.1,
+            "io": 0.1,
+            "network": 0.1
+          },
+          "confidence": 0.9,
+          "simulatedAt": 1771602267022
+        },
+        {
+          "id": "sim_1771602267022_7098",
+          "name": "Aggressive Index Merging",
+          "description": "Merge all small indexes to reduce fragmentation",
+          "operations": [
+            {
+              "type": "force_merge",
+              "target": "small_indexes",
+              "params": {
+                "maxNumSegments": 1
+              }
+            },
+            {
+              "type": "cache_warmup",
+              "target": "merged_indexes"
+            }
+          ],
+          "predictedImprovement": 0.450346354734566,
+          "riskLevel": "MEDIUM",
+          "estimatedDuration": "15-45 mins",
+          "resourceImpact": {
+            "cpu": 0.8,
+            "io": 0.9,
+            "network": 0.3
+          },
+          "confidence": 0.75,
+          "simulatedAt": 1771602267022
+        },
+        {
+          "id": "sim_1771602267022_7501",
+          "name": "ILM Optimization",
+          "description": "Optimize index lifecycle policies",
+          "operations": [
+            {
+              "type": "update_ilm_policy",
+              "target": "time_series_indices",
+              "params": {
+                "rollover_size": "10GB",
+                "rollover_age": "1d"
+              }
+            },
+            {
+              "type": "optimize_for_search",
+              "target": "read_only_indices"
+            }
+          ],
+          "predictedImprovement": 0.4448126737825443,
+          "riskLevel": "MINIMAL",
+          "estimatedDuration": "5-10 mins",
+          "resourceImpact": {
+            "cpu": 0.1,
+            "io": 0.2,
+            "network": 0.1
+          },
+          "confidence": 0.95,
+          "simulatedAt": 1771602267022
+        },
+        {
+          "id": "sim_1771602267022_6650",
+          "name": "Query Pattern Optimization",
+          "description": "Analyze and optimize frequently used queries",
+          "operations": [
+            {
+              "type": "analyze_slow_queries",
+              "target": "query_log"
+            },
+            {
+              "type": "create_optimized_mappings",
+              "target": "frequently_queried_fields"
+            },
+            {
+              "type": "setup_field_caps_cache",
+              "target": "frequently_accessed_indices"
+            }
+          ],
+          "predictedImprovement": 0.43691763919443827,
+          "riskLevel": "MINIMAL",
+          "estimatedDuration": "10-20 mins",
+          "resourceImpact": {
+            "cpu": 0.2,
+            "io": 0.3,
+            "network": 0.4
+          },
+          "confidence": 0.95,
+          "simulatedAt": 1771602267022
+        }
+      ],
+      "timestamp": 1771602267022,
+      "mlPrediction": {
+        "predictedImprovement": null,
+        "confidence": 0.9,
+        "riskAdjustedImprovement": null,
+        "estimatedTimeToAchieve": "1-5 minutes",
+        "probabilityOfSuccess": 0.81
+      }
+    },
+    "optimizationHistory": [
+      {
+        "cycleId": "initial-cycle",
+        "strategy": {
+          "name": "BALANCED",
+          "parameters": {
+            "aggressiveness": 0.7,
+            "riskTolerance": 0.6
+          }
+        },
+        "analysis": {
+          "timestamp": 1771602267022,
+          "healthStatus": "unknown",
+          "issues": [],
+          "opportunities": [],
+          "urgencyLevel": "MEDIUM"
+        },
+        "proposals": [
+          {
+            "rank": 1,
+            "title": "Shard Rebalancing",
+            "description": "Redistribute shards for better load balancing",
+            "estimatedImprovement": 0.46630898280683913,
+            "estimatedMemorySavings": 0.13989269484205175,
+            "riskLevel": "LOW",
+            "confidence": 0.9,
+            "operations": [
+              {
+                "type": "reroute",
+                "target": "unbalanced_shards",
+                "params": {
+                  "move_factor": 0.3
+                }
+              },
+              {
+                "type": "allocation_update",
+                "target": "nodes",
+                "params": {
+                  "balance_factor": 0.85
+                }
+              }
+            ],
+            "estimatedDuration": "5-15 mins"
+          },
+          {
+            "rank": 2,
+            "title": "Memory Optimization",
+            "description": "Adjust JVM settings and caching strategies",
+            "estimatedImprovement": 0.46304297706615066,
+            "estimatedMemorySavings": 0.1389128931198452,
+            "riskLevel": "LOW",
+            "confidence": 0.9,
+            "operations": [
+              {
+                "type": "cache_settings",
+                "target": "query_cache",
+                "params": {
+                  "max_size": "20%"
+                }
+              },
+              {
+                "type": "refresh_interval",
+                "target": "high_write_indexes",
+                "params": {
+                  "interval": "30s"
+                }
+              }
+            ],
+            "estimatedDuration": "2-5 mins"
+          },
+          {
+            "rank": 3,
+            "title": "Aggressive Index Merging",
+            "description": "Merge all small indexes to reduce fragmentation",
+            "estimatedImprovement": 0.450346354734566,
+            "estimatedMemorySavings": 0.1351039064203698,
+            "riskLevel": "MEDIUM",
+            "confidence": 0.75,
+            "operations": [
+              {
+                "type": "force_merge",
+                "target": "small_indexes",
+                "params": {
+                  "maxNumSegments": 1
+                }
+              },
+              {
+                "type": "cache_warmup",
+                "target": "merged_indexes"
+              }
+            ],
+            "estimatedDuration": "15-45 mins"
+          },
+          {
+            "rank": 4,
+            "title": "ILM Optimization",
+            "description": "Optimize index lifecycle policies",
+            "estimatedImprovement": 0.4448126737825443,
+            "estimatedMemorySavings": 0.13344380213476328,
+            "riskLevel": "MINIMAL",
+            "confidence": 0.95,
+            "operations": [
+              {
+                "type": "update_ilm_policy",
+                "target": "time_series_indices",
+                "params": {
+                  "rollover_size": "10GB",
+                  "rollover_age": "1d"
+                }
+              },
+              {
+                "type": "optimize_for_search",
+                "target": "read_only_indices"
+              }
+            ],
+            "estimatedDuration": "5-10 mins"
+          },
+          {
+            "rank": 5,
+            "title": "Query Pattern Optimization",
+            "description": "Analyze and optimize frequently used queries",
+            "estimatedImprovement": 0.43691763919443827,
+            "estimatedMemorySavings": 0.13107529175833146,
+            "riskLevel": "MINIMAL",
+            "confidence": 0.95,
+            "operations": [
+              {
+                "type": "analyze_slow_queries",
+                "target": "query_log"
+              },
+              {
+                "type": "create_optimized_mappings",
+                "target": "frequently_queried_fields"
+              },
+              {
+                "type": "setup_field_caps_cache",
+                "target": "frequently_accessed_indices"
+              }
+            ],
+            "estimatedDuration": "10-20 mins"
+          }
+        ],
+        "approvedProposal": {
+          "rank": 1,
+          "title": "Shard Rebalancing",
+          "description": "Redistribute shards for better load balancing",
+          "estimatedImprovement": 0.46630898280683913,
+          "estimatedMemorySavings": 0.13989269484205175,
+          "riskLevel": "LOW",
+          "confidence": 0.9,
+          "operations": [
+            {
+              "type": "reroute",
+              "target": "unbalanced_shards",
+              "params": {
+                "move_factor": 0.3
+              }
+            },
+            {
+              "type": "allocation_update",
+              "target": "nodes",
+              "params": {
+                "balance_factor": 0.85
+              }
+            }
+          ],
+          "estimatedDuration": "5-15 mins"
+        },
+        "result": {
+          "success": false
+        },
+        "simulationResults": [
+          {
+            "id": "sim_1771602267022_8202",
+            "name": "Shard Rebalancing",
+            "description": "Redistribute shards for better load balancing",
+            "operations": [
+              {
+                "type": "reroute",
+                "target": "unbalanced_shards",
+                "params": {
+                  "move_factor": 0.3
+                }
+              },
+              {
+                "type": "allocation_update",
+                "target": "nodes",
+                "params": {
+                  "balance_factor": 0.85
+                }
+              }
+            ],
+            "predictedImprovement": 0.46630898280683913,
+            "riskLevel": "LOW",
+            "estimatedDuration": "5-15 mins",
+            "resourceImpact": {
+              "cpu": 0.3,
+              "io": 0.4,
+              "network": 0.7
+            },
+            "confidence": 0.9,
+            "simulatedAt": 1771602267022
+          },
+          {
+            "id": "sim_1771602267022_3220",
+            "name": "Memory Optimization",
+            "description": "Adjust JVM settings and caching strategies",
+            "operations": [
+              {
+                "type": "cache_settings",
+                "target": "query_cache",
+                "params": {
+                  "max_size": "20%"
+                }
+              },
+              {
+                "type": "refresh_interval",
+                "target": "high_write_indexes",
+                "params": {
+                  "interval": "30s"
+                }
+              }
+            ],
+            "predictedImprovement": 0.46304297706615066,
+            "riskLevel": "LOW",
+            "estimatedDuration": "2-5 mins",
+            "resourceImpact": {
+              "cpu": 0.1,
+              "io": 0.1,
+              "network": 0.1
+            },
+            "confidence": 0.9,
+            "simulatedAt": 1771602267022
+          },
+          {
+            "id": "sim_1771602267022_7098",
+            "name": "Aggressive Index Merging",
+            "description": "Merge all small indexes to reduce fragmentation",
+            "operations": [
+              {
+                "type": "force_merge",
+                "target": "small_indexes",
+                "params": {
+                  "maxNumSegments": 1
+                }
+              },
+              {
+                "type": "cache_warmup",
+                "target": "merged_indexes"
+              }
+            ],
+            "predictedImprovement": 0.450346354734566,
+            "riskLevel": "MEDIUM",
+            "estimatedDuration": "15-45 mins",
+            "resourceImpact": {
+              "cpu": 0.8,
+              "io": 0.9,
+              "network": 0.3
+            },
+            "confidence": 0.75,
+            "simulatedAt": 1771602267022
+          },
+          {
+            "id": "sim_1771602267022_7501",
+            "name": "ILM Optimization",
+            "description": "Optimize index lifecycle policies",
+            "operations": [
+              {
+                "type": "update_ilm_policy",
+                "target": "time_series_indices",
+                "params": {
+                  "rollover_size": "10GB",
+                  "rollover_age": "1d"
+                }
+              },
+              {
+                "type": "optimize_for_search",
+                "target": "read_only_indices"
+              }
+            ],
+            "predictedImprovement": 0.4448126737825443,
+            "riskLevel": "MINIMAL",
+            "estimatedDuration": "5-10 mins",
+            "resourceImpact": {
+              "cpu": 0.1,
+              "io": 0.2,
+              "network": 0.1
+            },
+            "confidence": 0.95,
+            "simulatedAt": 1771602267022
+          },
+          {
+            "id": "sim_1771602267022_6650",
+            "name": "Query Pattern Optimization",
+            "description": "Analyze and optimize frequently used queries",
+            "operations": [
+              {
+                "type": "analyze_slow_queries",
+                "target": "query_log"
+              },
+              {
+                "type": "create_optimized_mappings",
+                "target": "frequently_queried_fields"
+              },
+              {
+                "type": "setup_field_caps_cache",
+                "target": "frequently_accessed_indices"
+              }
+            ],
+            "predictedImprovement": 0.43691763919443827,
+            "riskLevel": "MINIMAL",
+            "estimatedDuration": "10-20 mins",
+            "resourceImpact": {
+              "cpu": 0.2,
+              "io": 0.3,
+              "network": 0.4
+            },
+            "confidence": 0.95,
+            "simulatedAt": 1771602267022
+          }
+        ],
+        "timestamp": 1771602267022,
+        "mlPrediction": {
+          "predictedImprovement": null,
+          "confidence": 0.9,
+          "riskAdjustedImprovement": null,
+          "estimatedTimeToAchieve": "1-5 minutes",
+          "probabilityOfSuccess": 0.81
+        }
+      }
+    ],
+    "lastUpdated": 1771602267027
+  }
 }

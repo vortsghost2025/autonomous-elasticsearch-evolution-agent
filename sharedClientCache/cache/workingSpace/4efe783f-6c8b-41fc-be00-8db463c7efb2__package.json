@@ -1,0 +1,40 @@
+{
+  "name": "autonomous-elasticsearch-evolution-agent",
+  "version": "1.0.0",
+  "description": "A 14-phase autonomous system that evolves Elasticsearch clusters",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "demo": "node demo.js"
+  },
+  "keywords": [
+    "elasticsearch",
+    "autonomous",
+    "optimization",
+    "machine-learning",
+    "ai",
+    "multi-agent",
+    "simulation"
+  ],
+  "author": "Autonomous Systems Lab",
+  "license": "MIT",
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.15.0",
+    "@anthropic-ai/sdk": "^0.20.0",
+    "openai": "^4.28.0",
+    "express": "^4.18.2",
+    "dotenv": "^16.4.5",
+    "chalk": "^5.3.0",
+    "ws": "^8.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  },
+  "scripts": {
+    "cli": "node examples/cli.js",
+    "server": "node examples/server.js",
+    "dev": "nodemon examples/server.js",
+    "start": "node demo.js"
+  },

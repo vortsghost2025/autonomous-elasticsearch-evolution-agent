@@ -85,3 +85,16 @@
 2026-02-20 10:07:35 info: try to create ws connection
 2026-02-20 10:17:35 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
 2026-02-20 10:17:35 info: try to create ws connection
+2026-02-20 10:27:35 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 10:27:35 info: try to create ws connection
+2026-02-20 10:37:35 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 10:37:35 info: try to create ws connection
+2026-02-20 10:47:35 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 10:47:35 info: try to create ws connection
+2026-02-20 10:57:38 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 10:57:38 info: try to create ws connection
+2026-02-20 10:59:59 error: Accept Failed, {"requestId":"","errorCode":"unsupported_error","errorMessage":"workingSpaceFile status is not APPLIED, status:ACCEPTED"}
+2026-02-20 11:00:01 error: Accept Failed, {"requestId":"","errorCode":"unsupported_error","errorMessage":"workingSpaceFile status is not APPLIED, status:ACCEPTED"}
+2026-02-20 11:00:02 error: Accept Failed, {"requestId":"","errorCode":"unsupported_error","errorMessage":"workingSpaceFile status is not APPLIED, status:ACCEPTED"}
+2026-02-20 11:07:38 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 11:07:38 info: try to create ws connection

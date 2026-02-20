@@ -24,8 +24,13 @@ try {
   console.error("Failed to initialize persistent memory:", error);
 }
 
-// Create ES client (using fake connection for demo purposes)
-const esClient = new Client({ node: 'http://localhost:9200' });
+// Create ES client (using Elastic Cloud endpoint)
+const esClient = new Client({
+  node: 'https://my-elasticsearch-project-dd509a.es.us-central1.gcp.elastic.cloud:443',
+  auth: {
+    apiKey: 'ZGtxdGU1d0JySzNIU3VfSEJyY3g6cjRRT0xmYXNKcW9vazlmb1ZxRHp4Zw=='
+  }
+});
 
 // Initialize components with persistent memory
 const metricsCollector = new ElasticsearchMetricsCollector(esClient, { 
