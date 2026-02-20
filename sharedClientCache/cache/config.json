@@ -7,7 +7,7 @@
   },
   "env": "local",
   "global_config": {
-    "command_allow_list": "",
+    "command_allow_list": "mkdir,echo",
     "endpoint": "",
     "http_proxy": "",
     "mcp_auto_run": "disable",

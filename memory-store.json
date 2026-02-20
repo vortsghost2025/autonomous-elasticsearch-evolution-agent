@@ -1,0 +1,64 @@
+{
+  "errorLog": [
+    {
+      "message": {
+        "options": {
+          "redaction": {
+            "type": "replace",
+            "additionalKeys": []
+          }
+        },
+        "name": "ConnectionError",
+        "meta": {
+          "statusCode": 0,
+          "headers": {},
+          "meta": {
+            "context": null,
+            "request": {
+              "params": {
+                "method": "GET",
+                "path": "/_stats",
+                "querystring": "",
+                "headers": {
+                  "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                  "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0",
+                  "accept": "application/vnd.elasticsearch+json; compatible-with=9,text/plain",
+                  "content-type": "application/json"
+                }
+              },
+              "options": {},
+              "id": 3
+            },
+            "name": "elasticsearch-js",
+            "connection": {
+              "url": "http://localhost:9200/",
+              "tls": null,
+              "id": "http://localhost:9200/",
+              "timeout": null,
+              "headers": {
+                "user-agent": "elasticsearch-js/9.3.1 (win32 10.0.26200-x64; Node.js 24.13.0; Transport 9.3.3)",
+                "x-elastic-client-meta": "es=9.3.1,js=24.13.0,t=9.3.3,un=24.13.0"
+              },
+              "deadCount": 0,
+              "resurrectTimeout": 0,
+              "_openRequests": 0,
+              "weight": 1000,
+              "maxEventListeners": 100,
+              "pool": {
+                "_events": {},
+                "_eventsCount": 2
+              }
+            },
+            "attempts": 3,
+            "aborted": false,
+            "duration": 1.5785
+          },
+          "warnings": null
+        }
+      },
+      "stack": "ConnectionError\n    at SniffingTransport._request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:652:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:712:32\n    at async SniffingTransport.request (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/transport/esm/Transport.js:708:20)\n    at async Indices.stats (file:///C:/autonomous-elasticsearch-evolution-agent/node_modules/@elastic/elasticsearch/esm/api/api/indices.js:4493:16)\n    at async ElasticsearchMetricsCollector.getIndexStats (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:165:22)\n    at async Promise.all (index 2)\n    at async ElasticsearchMetricsCollector.collectMetrics (file:///C:/autonomous-elasticsearch-evolution-agent/elasticsearch-metrics-collector.js:63:54)\n    at async file:///C:/autonomous-elasticsearch-evolution-agent/demo.js:36:24",
+      "timestamp": 1771600804320,
+      "type": "ERROR"
+    }
+  ]
+}

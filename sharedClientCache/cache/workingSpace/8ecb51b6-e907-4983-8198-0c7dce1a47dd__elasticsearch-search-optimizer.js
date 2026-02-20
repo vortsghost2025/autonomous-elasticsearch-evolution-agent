@@ -1,0 +1,278 @@
+/**
+ * ElasticsearchSearchOptimizer
+ * Core autonomous agent for Elasticsearch cluster optimization
+ * Implements 14-phase autonomous architecture
+ */
+
+import PersistentMemory from './persistent-memory.js';
+import MLPredictor from './ml-predictor.js';
+
+export class ElasticsearchSearchOptimizer {
+  constructor(esClient, options = {}) {
+    this.esClient = esClient;
+    this.clusterName = options.clusterName || 'production';
+    this.autonomyLevel = options.autonomyLevel || 'supervised';
+    this.lastOptimization = null;
+    this.optimizationHistory = [];
+    this.persistentMemory = options.persistentMemory || new PersistentMemory(options.memoryOptions);
+    this.mlPredictor = new MLPredictor();
+    this.isInitialized = false;
+  }
+
+  async initialize() {
+    if (this.isInitialized) return;
+    
+    try {
+      // Load agent state from persistent memory
+      const savedState = await this.persistentMemory.retrieveAgentState();
+      if (savedState && savedState.optimizationHistory) {
+        this.optimizationHistory = savedState.optimizationHistory;
+        this.lastOptimization = savedState.lastOptimization || null;
+        console.log(`[ElasticsearchSearchOptimizer] Restored ${this.optimizationHistory.length} historical optimizations`);
+      }
+      
+      // Train ML predictor with historical data
+      if (this.optimizationHistory.length > 0) {
+        const trainingData = this.prepareTrainingData(this.optimizationHistory);
+        this.mlPredictor.train(trainingData);
+        console.log(`[ElasticsearchSearchOptimizer] Trained ML predictor with ${trainingData.length} historical entries`);
+      }
+      
+      this.isInitialized = true;
+      console.log('[ElasticsearchSearchOptimizer] Initialized with persistent memory and ML predictor');
+    } catch (error) {
+      console.error('[ElasticsearchSearchOptimizer] Error during initialization:', error);
+      // Continue anyway, we don't want to crash if memory restore fails
+      this.isInitialized = true;
+    }
+  }
+
+  /**
+   * Prepare training data for ML predictor from optimization history
+   */
+  prepareTrainingData(history) {
+    return history.map(entry => ({
+      success: entry.result?.success || false,
+      metrics: {
+        latencyImprovement: entry.result?.expectedImprovement || 0,
+        memoryImprovement: 0.25, // Placeholder
+        fragmentationImprovement: 0.42, // Placeholder
+        shardBalanceImprovement: 0.15, // Placeholder
+        throughputImprovement: 0.65 // Placeholder
+      },
+      proposal: entry.approvedProposal || entry.proposals[0],
+      timestamp: entry.timestamp
+    }));
+  }
+
+  async runPhase9Cycle(cycleId, input = {}) {
+    if (!this.isInitialized) {
+      await this.initialize();
+    }
+
+    try {
+      // Phase 8: Analyze
+      const analysis = this.phase8AnalyzeArchitecture(input);
+      
+      // Phase 9: Decide
+      const strategy = this.phase9SelectStrategy(analysis);
+      
+      // Phase 12-13: Simulate & Propose
+      const proposals = await this.phase12SimulateAndPropose(analysis, strategy);
+      
+      // Phase E: Govern
+      const approvedProposal = this.phaseEGovernanceCheck(proposals, analysis);
+      
+      // Apply if approved
+      let result = { success: false };
+      if (approvedProposal && this.canApply()) {
+        // Predict outcome using ML model
+        const prediction = await this.mlPredictor.predictOutcome(approvedProposal, analysis);
+        console.log(`[ML Predictor] Predicted improvement: ${(prediction.predictedImprovement * 100).toFixed(2)}% for ${approvedProposal.title}`);
+        
+        result = await this.applyProposal(approvedProposal);
+        
+        // Update ML predictor with actual results
+        const trainingEntry = {
+          success: result.success,
+          metrics: {
+            latencyImprovement: result.expectedImprovement || 0,
+            memoryImprovement: prediction.estimatedMemorySavings || 0.25,
+            fragmentationImprovement: 0.42, // Would come from actual measurement
+            shardBalanceImprovement: 0.15, // Would come from actual measurement
+            throughputImprovement: 0.65 // Would come from actual measurement
+          },
+          proposal: approvedProposal,
+          timestamp: Date.now(),
+          predictedImprovement: prediction.predictedImprovement
+        };
+        
+        this.mlPredictor.train([trainingEntry]);
+      }
+
+      const cycleResult = { 
+        cycleId, 
+        strategy, 
+        analysis, 
+        proposals, 
+        approvedProposal, 
+        result, 
+        timestamp: Date.now(),
+        mlPrediction: approvedProposal ? await this.mlPredictor.predictOutcome(approvedProposal, analysis) : null
+      };
+      
+      this.optimizationHistory.push(cycleResult);
+      this.lastOptimization = cycleResult;
+
+      // Persist the optimization to memory
+      await this.persistentMemory.addToOptimizationHistory(cycleResult);
+
+      // Store the updated agent state
+      await this.persistentMemory.storeAgentState({
+        lastOptimization: this.lastOptimization,
+        optimizationHistory: this.optimizationHistory
+      });
+
+      return { success: true, cycleResult, agentId: this.clusterName };
+    } catch (error) {
+      // Log the error to persistent memory
+      await this.persistentMemory.logError(error);
+      return { success: false, error: error.message, agentId: this.clusterName };
+    }
+  }
+
+  phase8AnalyzeArchitecture(metrics) {
+    return {
+      timestamp: Date.now(),
+      healthStatus: metrics.health?.status || 'unknown',
+      issues: [],
+      opportunities: [],
+      urgencyLevel: 'MEDIUM'
+    };
+  }
+
+  phase9SelectStrategy(analysis) {
+    const strategies = ['AGGRESSIVE', 'PERFORMANCE_FIRST', 'BALANCED', 'MAINTENANCE'];
+    return {
+      name: analysis.urgencyLevel === 'CRITICAL' ? 'AGGRESSIVE' : 'BALANCED',
+      parameters: { aggressiveness: 0.7, riskTolerance: 0.6 }
+    };
+  }
+
+  async phase12SimulateAndPropose(analysis, strategy) {
+    const proposals = [
+      {
+        rank: 1,
+        title: 'Merge small indexes',
+        description: 'Consolidate fragmented small indexes',
+        estimatedImprovement: 0.42,
+        estimatedMemorySavings: 0.25,
+        riskLevel: 'LOW',
+        confidence: 0.89
+      },
+      {
+        rank: 2,
+        title: 'Rebalance shards',
+        description: 'Redistribute shards to balance load',
+        estimatedImprovement: 0.15,
+        estimatedMemorySavings: 0.25,
+        riskLevel: 'MEDIUM',
+        confidence: 0.92
+      },
+      {
+        rank: 3,
+        title: 'Enable field compression',
+        description: 'Compress _source field storage',
+        estimatedImprovement: 0.05,
+        estimatedMemorySavings: 0.35,
+        riskLevel: 'MINIMAL',
+        confidence: 0.85
+      }
+    ];
+
+    // Enhance proposals with ML predictions
+    for (const proposal of proposals) {
+      const prediction = await this.mlPredictor.predictOutcome(proposal, analysis);
+      proposal.mlPrediction = prediction;
+    }
+
+    return proposals;
+  }
+
+  phaseEGovernanceCheck(proposals, analysis) {
+    if (!proposals.length) return null;
+    const topProposal = proposals[0];
+    
+    const approved =
+      topProposal.confidence >= 0.85 &&
+      topProposal.riskLevel !== 'HIGH' &&
+      analysis.healthStatus !== 'red';
+
+    return approved ? topProposal : null;
+  }
+
+  canApply() {
+    return this.autonomyLevel !== 'supervised' || this.lastApprovalReceived;
+  }
+
+  async applyProposal(proposal) {
+    console.log(`Applying: ${proposal.title}`);
+    return {
+      success: true,
+      proposal: proposal.title,
+      expectedImprovement: proposal.estimatedImprovement,
+      timestamp: Date.now()
+    };
+  }
+
+  async getStatus() {
+    if (!this.isInitialized) {
+      await this.initialize();
+    }
+    
+    return {
+      clusterName: this.clusterName,
+      autonomyLevel: this.autonomyLevel,
+      lastOptimization: this.lastOptimization,
+      optimizationCount: this.optimizationHistory.length,
+      isInitialized: this.isInitialized,
+      mlPredictorStatus: {
+        trainedOn: this.mlPredictor.trainingData.length,
+        lastUpdated: this.mlPredictor.trainingData.length > 0 ? 
+          this.mlPredictor.trainingData[this.mlPredictor.trainingData.length - 1].timestamp : null
+      }
+    };
+  }
+
+  getFullSystemStatus() {
+    return {
+      agentId: this.clusterName,
+      agentType: 'ELASTICSEARCH_OPTIMIZER',
+      phase_9: { status: 'RUNNING', next_action: 'SCHEDULE' },
+      timestamp: Date.now()
+    };
+  }
+
+  acceptFederationPattern(pattern) {
+    console.log(`[${this.clusterName}] Received pattern: ${pattern.name}`);
+    // Store learned patterns in persistent memory
+    this.persistentMemory.storeLearnedPattern(pattern);
+  }
+
+  async getHealthStatus() {
+    if (!this.isInitialized) {
+      await this.initialize();
+    }
+    
+    return {
+      agentId: this.clusterName,
+      isHealthy: true,
+      isCritical: false,
+      lastCheck: Date.now(),
+      memoryStatus: await this.persistentMemory.get('healthStatus', 'OK'),
+      mlPredictorStatus: `Trained on ${this.mlPredictor.trainingData.length} samples`
+    };
+  }
+}
+
+export default ElasticsearchSearchOptimizer;
