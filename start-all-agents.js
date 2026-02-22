@@ -143,11 +143,26 @@ async function startAllAgents() {
 
     const children = await Promise.all(agents.map(agent => startAgent(agent)));
 
+    // Also start the cockpit (web interface on port 7771)
+    console.log('\n🧠 Starting Cockpit on port 7771...');
+    const cockpit = spawn('node', ['start-web-interface.js'], {
+      stdio: ['pipe', 'pipe', 'pipe']
+    });
+    cockpit.stdout.on('data', d => console.log(`[Cockpit] ${d.toString().trim()}`));
+    cockpit.stderr.on('data', d => console.error(`[Cockpit] ${d.toString().trim()}`));
+    children.push(cockpit);
+
+    // Open browser after short delay
+    setTimeout(() => {
+      execSync('start http://localhost:3001/master', { stdio: 'ignore' });
+    }, 3000);
+
     console.log('\n🌟 All agents started!');
     console.log('\n📋 Agent Status:');
     agents.forEach(agent => {
       console.log(`   ${agent.name}: http://localhost:${agent.port}`);
     });
+    console.log('   Cockpit:        http://localhost:7771');
 
     // Keep process alive
     process.on('SIGINT', () => {

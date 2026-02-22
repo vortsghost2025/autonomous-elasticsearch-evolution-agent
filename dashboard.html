@@ -301,6 +301,18 @@
   </style>
 </head>
 <body>
+  <div style="background:#0f172a;border-bottom:1px solid #1e293b;padding:10px 24px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+    <span style="color:#4fc3f7;font-weight:bold;margin-right:8px;">🚀 Quick Nav:</span>
+    <a href="http://localhost:7771" target="_blank" rel="noopener" style="color:#4fc3f7;background:#1e293b;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:13px;">🧠 Cockpit (7771)</a>
+    <a href="http://localhost:3001" target="_blank" rel="noopener" style="color:#10b981;background:#1e293b;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:13px;">⚡ Agent Dashboard (3001)</a>
+    <a href="http://localhost:3001/master" target="_blank" rel="noopener" style="color:#f59e0b;background:#1e293b;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:13px;">🎛️ Master Control</a>
+    <a href="http://localhost:3002/status" target="_blank" rel="noopener" style="color:#a78bfa;background:#1e293b;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:13px;">🔵 Background Agent (3002)</a>
+    <a href="http://localhost:3003/status" target="_blank" rel="noopener" style="color:#fb7185;background:#1e293b;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:13px;">☁️ Cloud Agent (3003)</a>
+    <a href="http://localhost/swarm-ui.html" target="_blank" rel="noopener" style="color:#10b981;background:#1e293b;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:13px;">🐝 Swarm</a>
+    <a href="http://localhost/genomics-ui.html" target="_blank" rel="noopener" style="color:#a78bfa;background:#1e293b;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:13px;">🧬 Genomics</a>
+    <a href="http://localhost/medical-ui.html" target="_blank" rel="noopener" style="color:#fb7185;background:#1e293b;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:13px;">🏥 Medical</a>
+    <a href="http://localhost/compute-ui.html" target="_blank" rel="noopener" style="color:#34d399;background:#1e293b;padding:6px 14px;border-radius:6px;text-decoration:none;font-size:13px;">💻 Compute</a>
+  </div>
   <div class="container">
     <header>
       <h1>Autonomous Elasticsearch Evolution Agent</h1>
@@ -313,6 +325,19 @@
     </div>
     
     <div class="grid">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Orchestration Status</h2>
+        </div>
+        <div class="agent-status">
+          <span class="agent-name">Mode:</span>
+          <span class="agent-status-text" id="orchestrationStatus">Idle</span>
+        </div>
+        <div class="agent-status">
+          <span class="agent-name">Last Action:</span>
+          <span class="agent-status-text" id="orchestrationAction">None</span>
+        </div>
+      </div>
       <div class="card">
         <div class="card-header">
           <h2 class="card-title">Cluster Metrics</h2>
@@ -460,60 +485,34 @@
     
     function connectWebSocket() {
       try {
-        // Try different ports for connection
-        const ports = [3001, 3002, 3003];
-        let connected = false;
-        
-        for (const port of ports) {
+        socket = new WebSocket('ws://localhost:3000/agent');
+        socket.onopen = function(event) {
+          console.log('Connected to WebSocket on port 3000');
+          isConnected = true;
+          document.getElementById('connectionStatus').innerHTML = `
+            <span class="status-indicator status-active"></span>
+            Connected to system (Port 3000)
+          `;
+        };
+        socket.onmessage = function(event) {
           try {
-            socket = new WebSocket(`ws://localhost:${port}`);
-            
-            socket.onopen = function(event) {
-              console.log('Connected to WebSocket on port:', port);
-              isConnected = true;
-              connected = true;
-              
-              // Update connection status
-              document.getElementById('connectionStatus').innerHTML = `
-                <span class="status-indicator status-active"></span>
-                Connected to system (Port ${port})
-              `;
-            };
-            
-            socket.onmessage = function(event) {
-              try {
-                const data = JSON.parse(event.data);
-                updateDashboard(data);
-              } catch (e) {
-                console.error('Error parsing message:', e);
-              }
-            };
-            
-            socket.onclose = function(event) {
-              if (connected) {
-                isConnected = false;
-                connected = false;
-                
-                // Update connection status
-                document.getElementById('connectionStatus').innerHTML = `
-                  <span class="status-indicator status-warning"></span>
-                  Disconnected - retrying...
-                `;
-                
-                // Attempt to reconnect after delay
-                setTimeout(connectWebSocket, 5000);
-              }
-            };
-            
-            socket.onerror = function(error) {
-              console.error('WebSocket error:', error);
-            };
-            
-            if (connected) break;
+            const data = JSON.parse(event.data);
+            updateDashboard(data);
           } catch (e) {
-            console.error(`Failed to connect to port ${port}:`, e.message);
+            console.error('Error parsing message:', e);
           }
-        }
+        };
+        socket.onclose = function(event) {
+          isConnected = false;
+          document.getElementById('connectionStatus').innerHTML = `
+            <span class="status-indicator status-warning"></span>
+            Disconnected - retrying...
+          `;
+          setTimeout(connectWebSocket, 5000);
+        };
+        socket.onerror = function(error) {
+          console.error('WebSocket error:', error);
+        };
       } catch (e) {
         console.error('Error establishing WebSocket connection:', e);
       }
@@ -665,6 +664,8 @@
     
     document.getElementById('swarmBtn').addEventListener('click', () => {
       addChatMessage('Executing swarm command...', 'User');
+      document.getElementById('orchestrationStatus').textContent = 'Swarm';
+      document.getElementById('orchestrationAction').textContent = 'Swarm operation started';
       if (socket && isConnected) {
         socket.send(JSON.stringify({ 
           type: 'swarm-command', 
@@ -676,6 +677,8 @@
     
     document.getElementById('coordinateBtn').addEventListener('click', () => {
       addChatMessage('Coordinating agents...', 'User');
+      document.getElementById('orchestrationStatus').textContent = 'Coordinating';
+      document.getElementById('orchestrationAction').textContent = 'Coordination started';
       if (socket && isConnected) {
         socket.send(JSON.stringify({ 
           type: 'coordination-request', 
