@@ -5,7 +5,7 @@
  * Implements 14-phase autonomous architecture
  */
 
-import PersistentMemory from './persistent-memory.js';
+import { PersistentMemory } from './persistent-memory.js';
 import MLPredictor from './ml-predictor.js';
 import SimulationEngine from './simulation-engine.js';
 import agent from './lib/agent.js'; // Import the AI agent

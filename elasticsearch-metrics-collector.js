@@ -4,20 +4,18 @@
  * from an Elasticsearch cluster
  */
 
-import PersistentMemory from './persistent-memory.js';
+import { PersistentMemory } from './persistent-memory.js';
 
 // Import dashboard functions if available
 let dashboardAvailable = false;
 let broadcastMetrics = () => {};
 
-try {
-  const dashboard = await import('./dashboard-server.js');
-  if (dashboard.broadcastMetrics) {
-    broadcastMetrics = dashboard.broadcastMetrics;
-    dashboardAvailable = true;
-    console.log('[MetricsCollector] Connected to real-time dashboard server');
-  }
-} catch (e) {
+import * as dashboard from './dashboard-server.js';
+if (dashboard.broadcastMetrics) {
+  broadcastMetrics = dashboard.broadcastMetrics;
+  dashboardAvailable = true;
+  console.log('[MetricsCollector] Connected to real-time dashboard server');
+} else {
   console.log('[MetricsCollector] Dashboard server not available, continuing without real-time updates');
 }
 

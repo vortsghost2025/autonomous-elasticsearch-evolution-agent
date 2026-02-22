@@ -1,0 +1,7 @@
+# Dockerfile for Dual-Agent Collaboration Hub
+FROM node:18-alpine
+WORKDIR /app
+COPY collab-hub-server.js ./
+RUN npm install express ws cors
+EXPOSE 4000
+CMD ["node", "collab-hub-server.js"]

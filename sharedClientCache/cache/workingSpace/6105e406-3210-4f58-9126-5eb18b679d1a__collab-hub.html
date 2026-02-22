@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dual-Agent Collaboration Hub</title>
+  <style>
+    body { background: #181c24; color: #f8fafc; font-family: 'Segoe UI',sans-serif; margin:0; padding:0; }
+    .container { max-width: 900px; margin: 40px auto; background: #23293a; border-radius: 12px; box-shadow: 0 4px 24px #0008; padding: 32px; }
+    h1 { text-align: center; margin-bottom: 32px; }
+    .panels { display: flex; gap: 32px; }
+    .panel { flex: 1; background: #20242f; border-radius: 8px; padding: 18px; display: flex; flex-direction: column; }
+    .panel h2 { margin-top: 0; }
+    .messages { flex: 1; overflow-y: auto; background: #181c24; border-radius: 6px; padding: 10px; margin-bottom: 12px; min-height: 180px; }
+    .msg { margin-bottom: 8px; padding: 6px 10px; border-radius: 4px; background: #23293a; }
+    .msg .meta { color: #7c3aed; font-size: 0.85em; margin-right: 8px; }
+    .input-row { display: flex; gap: 8px; }
+    .input-row input { flex: 1; padding: 8px; border-radius: 4px; border: none; background: #23293a; color: #f8fafc; }
+    .input-row button { padding: 8px 16px; border-radius: 4px; border: none; background: #7c3aed; color: #fff; font-weight: bold; cursor: pointer; }
+    .input-row button:hover { background: #a78bfa; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Dual-Agent Collaboration Hub</h1>
+    <div class="panels">
+      <div class="panel" id="vscode-panel">
+        <h2>VS Code Agents</h2>
+        <div class="messages" id="vscode-messages"></div>
+        <div class="input-row">
+          <input id="vscode-input" placeholder="Send message as VS Code agent...">
+          <button onclick="sendMessage('vscode')">Send</button>
+        </div>
+      </div>
+      <div class="panel" id="lmarena-panel">
+        <h2>LM Arena Agents</h2>
+        <div class="messages" id="lmarena-messages"></div>
+        <div class="input-row">
+          <input id="lmarena-input" placeholder="Send message as LM Arena agent...">
+          <button onclick="sendMessage('lmarena')">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const ws = new WebSocket('ws://' + location.hostname + ':4000');
+    ws.onmessage = (event) => {
+      const data = JSON.parse(event.data);
+      addMessage(data.group, data);
+    };
+    function addMessage(group, msg) {
+      const box = document.getElementById(group+'-messages');
+      const div = document.createElement('div');
+      div.className = 'msg';
+      div.innerHTML = `<span class='meta'>${new Date(msg.timestamp||Date.now()).toLocaleTimeString()}</span> ${msg.text || msg.message || ''}`;
+      box.appendChild(div);
+      box.scrollTop = box.scrollHeight;
+    }
+    function sendMessage(group) {
+      const input = document.getElementById(group+'-input');
+      const text = input.value.trim();
+      if (!text) return;
+      ws.send(JSON.stringify({ type: 'message', group, text }));
+      input.value = '';
+    }
+    // Polling fallback every 10s
+    setInterval(() => {
+      ['vscode','lmarena'].forEach(group => {
+        fetch(`/api/messages/${group}`)
+          .then(r=>r.json())
+          .then(msgs => {
+            const box = document.getElementById(group+'-messages');
+            box.innerHTML = '';
+            msgs.forEach(m => addMessage(group, m));
+          });
+      });
+    }, 10000);
+  </script>
+</body>
+</html>

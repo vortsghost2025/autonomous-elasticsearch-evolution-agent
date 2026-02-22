@@ -17,17 +17,31 @@ export class CodingAgent {
     this.initTemplates();
   }
 
-  initTemplates() {
-    // Template for index merging
-    this.templates.set('merge_indexes', `
-/**
- * Index Merging Operation
- * Reduces fragmentation by merging small segments
- */
-async function mergeIndexes(client, options = {}) {
-  const {
-    indexPattern = "*",
-    maxNumSegments = 1,
+  // CodingAgent template for dual-agent system
+  export class CodingAgent {
+    constructor(options = {}) {
+      this.agentId = options.agentId || 'coding-agent';
+      this.persistentMemory = options.persistentMemory;
+      this.llmConfig = options.llmConfig || { model: 'gpt-4', temperature: 0.3, maxTokens: 1536 };
+      this.initialized = false;
+    }
+
+    async initialize() {
+      // Simulate LLM/model initialization
+      this.initialized = true;
+      console.log(`[${this.agentId}] Initialized with model: ${this.llmConfig.model}`);
+    }
+
+    async validate(input) {
+      // Simulate validation logic
+      return {
+        status: 'validated',
+        details: `Validated input: ${JSON.stringify(input)}`,
+        agent: this.agentId,
+        model: this.llmConfig.model
+      };
+    }
+  }
     onlyExpungeDeletes = false
   } = options;
 

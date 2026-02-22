@@ -7,7 +7,7 @@
   },
   "env": "local",
   "global_config": {
-    "command_allow_list": "mkdir,echo,cd,npm,node,netstat,findstr",
+    "command_allow_list": "mkdir,echo,cd,npm,node,netstat,findstr,taskkill,tasklist",
     "endpoint": "",
     "http_proxy": "",
     "mcp_auto_run": "disable",

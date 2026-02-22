@@ -1,1 +1,542 @@
-{}
+{
+  "researchInsights": [
+    {
+      "timestamp": 1771603830534,
+      "clusterName": "test-cluster",
+      "insights": [
+        {
+          "type": "warning",
+          "category": "health",
+          "description": "Cluster health is YELLOW - some primary shards not replicated",
+          "severity": "high",
+          "recommendation": "Check replica settings and node availability"
+        },
+        {
+          "type": "optimization",
+          "category": "memory",
+          "description": "Moderate-high memory usage detected: 82.0%",
+          "severity": "medium",
+          "recommendation": "Review cache settings and consider optimization"
+        },
+        {
+          "type": "optimization",
+          "category": "performance",
+          "description": "Moderate index fragmentation detected: 3.20 segments/doc",
+          "severity": "medium",
+          "recommendation": "Evaluate if merging small indexes would improve performance"
+        },
+        {
+          "type": "optimization",
+          "category": "performance",
+          "description": "Moderate query latency detected: 0.750s",
+          "severity": "medium",
+          "recommendation": "Review query patterns and index configurations"
+        }
+      ],
+      "summary": {
+        "totalInsights": 4,
+        "criticalIssues": 0,
+        "highPriority": 1,
+        "mediumPriority": 3,
+        "lowPriority": 0
+      },
+      "metricsSnapshot": {
+        "healthStatus": "yellow",
+        "memoryUsage": 0.82,
+        "fragmentation": 3.2,
+        "queryLatency": 0.75,
+        "shardHealth": 0.78
+      }
+    },
+    {
+      "timestamp": 1771603830840,
+      "clusterName": "test-cluster",
+      "insights": [
+        {
+          "type": "warning",
+          "category": "health",
+          "description": "Cluster health is YELLOW - some primary shards not replicated",
+          "severity": "high",
+          "recommendation": "Check replica settings and node availability"
+        },
+        {
+          "type": "optimization",
+          "category": "memory",
+          "description": "Moderate-high memory usage detected: 82.0%",
+          "severity": "medium",
+          "recommendation": "Review cache settings and consider optimization"
+        },
+        {
+          "type": "optimization",
+          "category": "performance",
+          "description": "Moderate index fragmentation detected: 3.20 segments/doc",
+          "severity": "medium",
+          "recommendation": "Evaluate if merging small indexes would improve performance"
+        },
+        {
+          "type": "optimization",
+          "category": "performance",
+          "description": "Moderate query latency detected: 0.750s",
+          "severity": "medium",
+          "recommendation": "Review query patterns and index configurations"
+        }
+      ],
+      "summary": {
+        "totalInsights": 4,
+        "criticalIssues": 0,
+        "highPriority": 1,
+        "mediumPriority": 3,
+        "lowPriority": 0
+      },
+      "metricsSnapshot": {
+        "healthStatus": "yellow",
+        "memoryUsage": 0.82,
+        "fragmentation": 3.2,
+        "queryLatency": 0.75,
+        "shardHealth": 0.78
+      }
+    },
+    {
+      "timestamp": 1771603919266,
+      "clusterName": "test-cluster",
+      "insights": [
+        {
+          "type": "warning",
+          "category": "health",
+          "description": "Cluster health is YELLOW - some primary shards not replicated",
+          "severity": "high",
+          "recommendation": "Check replica settings and node availability"
+        },
+        {
+          "type": "optimization",
+          "category": "memory",
+          "description": "Moderate-high memory usage detected: 82.0%",
+          "severity": "medium",
+          "recommendation": "Review cache settings and consider optimization"
+        },
+        {
+          "type": "optimization",
+          "category": "performance",
+          "description": "Moderate index fragmentation detected: 3.20 segments/doc",
+          "severity": "medium",
+          "recommendation": "Evaluate if merging small indexes would improve performance"
+        },
+        {
+          "type": "optimization",
+          "category": "performance",
+          "description": "Moderate query latency detected: 0.750s",
+          "severity": "medium",
+          "recommendation": "Review query patterns and index configurations"
+        }
+      ],
+      "summary": {
+        "totalInsights": 4,
+        "criticalIssues": 0,
+        "highPriority": 1,
+        "mediumPriority": 3,
+        "lowPriority": 0
+      },
+      "metricsSnapshot": {
+        "healthStatus": "yellow",
+        "memoryUsage": 0.82,
+        "fragmentation": 3.2,
+        "queryLatency": 0.75,
+        "shardHealth": 0.78
+      }
+    },
+    {
+      "timestamp": 1771603919545,
+      "clusterName": "test-cluster",
+      "insights": [
+        {
+          "type": "warning",
+          "category": "health",
+          "description": "Cluster health is YELLOW - some primary shards not replicated",
+          "severity": "high",
+          "recommendation": "Check replica settings and node availability"
+        },
+        {
+          "type": "optimization",
+          "category": "memory",
+          "description": "Moderate-high memory usage detected: 82.0%",
+          "severity": "medium",
+          "recommendation": "Review cache settings and consider optimization"
+        },
+        {
+          "type": "optimization",
+          "category": "performance",
+          "description": "Moderate index fragmentation detected: 3.20 segments/doc",
+          "severity": "medium",
+          "recommendation": "Evaluate if merging small indexes would improve performance"
+        },
+        {
+          "type": "optimization",
+          "category": "performance",
+          "description": "Moderate query latency detected: 0.750s",
+          "severity": "medium",
+          "recommendation": "Review query patterns and index configurations"
+        }
+      ],
+      "summary": {
+        "totalInsights": 4,
+        "criticalIssues": 0,
+        "highPriority": 1,
+        "mediumPriority": 3,
+        "lowPriority": 0
+      },
+      "metricsSnapshot": {
+        "healthStatus": "yellow",
+        "memoryUsage": 0.82,
+        "fragmentation": 3.2,
+        "queryLatency": 0.75,
+        "shardHealth": 0.78
+      }
+    },
+    {
+      "timestamp": 1771603932133,
+      "clusterName": "test-cluster",
+      "insights": [
+        {
+          "type": "warning",
+          "category": "health",
+          "description": "Cluster health is YELLOW - some primary shards not replicated",
+          "severity": "high",
+          "recommendation": "Check replica settings and node availability"
+        },
+        {
+          "type": "optimization",
+          "category": "memory",
+          "description": "Moderate-high memory usage detected: 82.0%",
+          "severity": "medium",
+          "recommendation": "Review cache settings and consider optimization"
+        },
+        {
+          "type": "optimization",
+          "category": "performance",
+          "description": "Moderate index fragmentation detected: 3.20 segments/doc",
+          "severity": "medium",
+          "recommendation": "Evaluate if merging small indexes would improve performance"
+        },
+        {
+          "type": "optimization",
+          "category": "performance",
+          "description": "Moderate query latency detected: 0.750s",
+          "severity": "medium",
+          "recommendation": "Review query patterns and index configurations"
+        }
+      ],
+      "summary": {
+        "totalInsights": 4,
+        "criticalIssues": 0,
+        "highPriority": 1,
+        "mediumPriority": 3,
+        "lowPriority": 0
+      },
+      "metricsSnapshot": {
+        "healthStatus": "yellow",
+        "memoryUsage": 0.82,
+        "fragmentation": 3.2,
+        "queryLatency": 0.75,
+        "shardHealth": 0.78
+      }
+    },
+    {
+      "timestamp": 1771603932400,
+      "clusterName": "test-cluster",
+      "insights": [
+        {
+          "type": "warning",
+          "category": "health",
+          "description": "Cluster health is YELLOW - some primary shards not replicated",
+          "severity": "high",
+          "recommendation": "Check replica settings and node availability"
+        },
+        {
+          "type": "optimization",
+          "category": "memory",
+          "description": "Moderate-high memory usage detected: 82.0%",
+          "severity": "medium",
+          "recommendation": "Review cache settings and consider optimization"
+        },
+        {
+          "type": "optimization",
+          "category": "performance",
+          "description": "Moderate index fragmentation detected: 3.20 segments/doc",
+          "severity": "medium",
+          "recommendation": "Evaluate if merging small indexes would improve performance"
+        },
+        {
+          "type": "optimization",
+          "category": "performance",
+          "description": "Moderate query latency detected: 0.750s",
+          "severity": "medium",
+          "recommendation": "Review query patterns and index configurations"
+        }
+      ],
+      "summary": {
+        "totalInsights": 4,
+        "criticalIssues": 0,
+        "highPriority": 1,
+        "mediumPriority": 3,
+        "lowPriority": 0
+      },
+      "metricsSnapshot": {
+        "healthStatus": "yellow",
+        "memoryUsage": 0.82,
+        "fragmentation": 3.2,
+        "queryLatency": 0.75,
+        "shardHealth": 0.78
+      }
+    },
+    {
+      "timestamp": 1771604431480,
+      "clusterName": "test-cluster",
+      "insights": [
+        {
+          "type": "warning",
+          "category": "health",
+          "description": "Cluster health is YELLOW - some primary shards not replicated",
+          "severity": "high",
+          "recommendation": "Check replica settings and node availability"
+        },
+        {
+          "type": "optimization",
+          "category": "memory",
+          "description": "Moderate-high memory usage detected: 82.0%",
+          "severity": "medium",
+          "recommendation": "Review cache settings and consider optimization"
+        },
+        {
+          "type": "optimization",
+          "category": "performance",
+          "description": "Moderate index fragmentation detected: 3.20 segments/doc",
+          "severity": "medium",
+          "recommendation": "Evaluate if merging small indexes would improve performance"
+        },
+        {
+          "type": "optimization",
+          "category": "performance",
+          "description": "Moderate query latency detected: 0.750s",
+          "severity": "medium",
+          "recommendation": "Review query patterns and index configurations"
+        }
+      ],
+      "summary": {
+        "totalInsights": 4,
+        "criticalIssues": 0,
+        "highPriority": 1,
+        "mediumPriority": 3,
+        "lowPriority": 0
+      },
+      "metricsSnapshot": {
+        "healthStatus": "yellow",
+        "memoryUsage": 0.82,
+        "fragmentation": 3.2,
+        "queryLatency": 0.75,
+        "shardHealth": 0.78
+      }
+    },
+    {
+      "timestamp": 1771604431747,
+      "clusterName": "test-cluster",
+      "insights": [
+        {
+          "type": "warning",
+          "category": "health",
+          "description": "Cluster health is YELLOW - some primary shards not replicated",
+          "severity": "high",
+          "recommendation": "Check replica settings and node availability"
+        },
+        {
+          "type": "optimization",
+          "category": "memory",
+          "description": "Moderate-high memory usage detected: 82.0%",
+          "severity": "medium",
+          "recommendation": "Review cache settings and consider optimization"
+        },
+        {
+          "type": "optimization",
+          "category": "performance",
+          "description": "Moderate index fragmentation detected: 3.20 segments/doc",
+          "severity": "medium",
+          "recommendation": "Evaluate if merging small indexes would improve performance"
+        },
+        {
+          "type": "optimization",
+          "category": "performance",
+          "description": "Moderate query latency detected: 0.750s",
+          "severity": "medium",
+          "recommendation": "Review query patterns and index configurations"
+        }
+      ],
+      "summary": {
+        "totalInsights": 4,
+        "criticalIssues": 0,
+        "highPriority": 1,
+        "mediumPriority": 3,
+        "lowPriority": 0
+      },
+      "metricsSnapshot": {
+        "healthStatus": "yellow",
+        "memoryUsage": 0.82,
+        "fragmentation": 3.2,
+        "queryLatency": 0.75,
+        "shardHealth": 0.78
+      }
+    },
+    {
+      "timestamp": 1771621287164,
+      "clusterName": "test-cluster",
+      "insights": [
+        {
+          "type": "warning",
+          "category": "health",
+          "description": "Cluster health is YELLOW - some primary shards not replicated",
+          "severity": "high",
+          "recommendation": "Check replica settings and node availability"
+        },
+        {
+          "type": "optimization",
+          "category": "memory",
+          "description": "Moderate-high memory usage detected: 82.0%",
+          "severity": "medium",
+          "recommendation": "Review cache settings and consider optimization"
+        },
+        {
+          "type": "optimization",
+          "category": "performance",
+          "description": "Moderate index fragmentation detected: 3.20 segments/doc",
+          "severity": "medium",
+          "recommendation": "Evaluate if merging small indexes would improve performance"
+        },
+        {
+          "type": "optimization",
+          "category": "performance",
+          "description": "Moderate query latency detected: 0.750s",
+          "severity": "medium",
+          "recommendation": "Review query patterns and index configurations"
+        }
+      ],
+      "summary": {
+        "totalInsights": 4,
+        "criticalIssues": 0,
+        "highPriority": 1,
+        "mediumPriority": 3,
+        "lowPriority": 0
+      },
+      "metricsSnapshot": {
+        "healthStatus": "yellow",
+        "memoryUsage": 0.82,
+        "fragmentation": 3.2,
+        "queryLatency": 0.75,
+        "shardHealth": 0.78
+      }
+    },
+    {
+      "timestamp": 1771621287466,
+      "clusterName": "test-cluster",
+      "insights": [
+        {
+          "type": "warning",
+          "category": "health",
+          "description": "Cluster health is YELLOW - some primary shards not replicated",
+          "severity": "high",
+          "recommendation": "Check replica settings and node availability"
+        },
+        {
+          "type": "optimization",
+          "category": "memory",
+          "description": "Moderate-high memory usage detected: 82.0%",
+          "severity": "medium",
+          "recommendation": "Review cache settings and consider optimization"
+        },
+        {
+          "type": "optimization",
+          "category": "performance",
+          "description": "Moderate index fragmentation detected: 3.20 segments/doc",
+          "severity": "medium",
+          "recommendation": "Evaluate if merging small indexes would improve performance"
+        },
+        {
+          "type": "optimization",
+          "category": "performance",
+          "description": "Moderate query latency detected: 0.750s",
+          "severity": "medium",
+          "recommendation": "Review query patterns and index configurations"
+        }
+      ],
+      "summary": {
+        "totalInsights": 4,
+        "criticalIssues": 0,
+        "highPriority": 1,
+        "mediumPriority": 3,
+        "lowPriority": 0
+      },
+      "metricsSnapshot": {
+        "healthStatus": "yellow",
+        "memoryUsage": 0.82,
+        "fragmentation": 3.2,
+        "queryLatency": 0.75,
+        "shardHealth": 0.78
+      }
+    }
+  ],
+  "learnedPatterns": [],
+  "generatedCode": [
+    {
+      "id": "generic_1771603830843",
+      "type": "generic_optimization",
+      "category": "performance",
+      "priority": "HIGH",
+      "code": "\n/**\n * Generic Optimization Implementation\n * Based on research recommendation: Cluster health is YELLOW - some primary shards not replicate...\n */\nasync function genericOptimization(client, options = {}) {\n  console.log(\"Executing generic optimization for: Cluster health is YELLOW - some primary shards not...\");\n  \n  // Implementation would depend on specific recommendation\n  // This is a placeholder for custom optimization logic\n  \n  try {\n    // Perform optimization based on recommendation\n    console.log(\"Check replica settings and node availability\");\n    \n    return {\n      success: true,\n      message: \"Generic optimization completed\",\n      recommendation: \"Cluster health is YELLOW - some primary shards not replicated\",\n      estimatedImpact: 0.7\n    };\n  } catch (error) {\n    console.error(\"Generic optimization failed:\", error);\n    return { \n      success: false, \n      error: error.message,\n      recommendation: \"Cluster health is YELLOW - some primary shards not replicated\"\n    };\n  }\n}\n",
+      "description": "Generic optimization based on research recommendation",
+      "recommendationRef": "Cluster health is YELLOW - some primary shards not replicated",
+      "generatedAt": 1771603830843,
+      "estimatedImpact": 0.7
+    },
+    {
+      "id": "generic_1771603919547",
+      "type": "generic_optimization",
+      "category": "performance",
+      "priority": "HIGH",
+      "code": "\n/**\n * Generic Optimization Implementation\n * Based on research recommendation: Cluster health is YELLOW - some primary shards not replicate...\n */\nasync function genericOptimization(client, options = {}) {\n  console.log(\"Executing generic optimization for: Cluster health is YELLOW - some primary shards not...\");\n  \n  // Implementation would depend on specific recommendation\n  // This is a placeholder for custom optimization logic\n  \n  try {\n    // Perform optimization based on recommendation\n    console.log(\"Check replica settings and node availability\");\n    \n    return {\n      success: true,\n      message: \"Generic optimization completed\",\n      recommendation: \"Cluster health is YELLOW - some primary shards not replicated\",\n      estimatedImpact: 0.7\n    };\n  } catch (error) {\n    console.error(\"Generic optimization failed:\", error);\n    return { \n      success: false, \n      error: error.message,\n      recommendation: \"Cluster health is YELLOW - some primary shards not replicated\"\n    };\n  }\n}\n",
+      "description": "Generic optimization based on research recommendation",
+      "recommendationRef": "Cluster health is YELLOW - some primary shards not replicated",
+      "generatedAt": 1771603919547,
+      "estimatedImpact": 0.7
+    },
+    {
+      "id": "generic_1771603932403",
+      "type": "generic_optimization",
+      "category": "performance",
+      "priority": "HIGH",
+      "code": "\n/**\n * Generic Optimization Implementation\n * Based on research recommendation: Cluster health is YELLOW - some primary shards not replicate...\n */\nasync function genericOptimization(client, options = {}) {\n  console.log(\"Executing generic optimization for: Cluster health is YELLOW - some primary shards not...\");\n  \n  // Implementation would depend on specific recommendation\n  // This is a placeholder for custom optimization logic\n  \n  try {\n    // Perform optimization based on recommendation\n    console.log(\"Check replica settings and node availability\");\n    \n    return {\n      success: true,\n      message: \"Generic optimization completed\",\n      recommendation: \"Cluster health is YELLOW - some primary shards not replicated\",\n      estimatedImpact: 0.7\n    };\n  } catch (error) {\n    console.error(\"Generic optimization failed:\", error);\n    return { \n      success: false, \n      error: error.message,\n      recommendation: \"Cluster health is YELLOW - some primary shards not replicated\"\n    };\n  }\n}\n",
+      "description": "Generic optimization based on research recommendation",
+      "recommendationRef": "Cluster health is YELLOW - some primary shards not replicated",
+      "generatedAt": 1771603932403,
+      "estimatedImpact": 0.7
+    },
+    {
+      "id": "generic_1771604431749",
+      "type": "generic_optimization",
+      "category": "performance",
+      "priority": "HIGH",
+      "code": "\n/**\n * Generic Optimization Implementation\n * Based on research recommendation: Cluster health is YELLOW - some primary shards not replicate...\n */\nasync function genericOptimization(client, options = {}) {\n  console.log(\"Executing generic optimization for: Cluster health is YELLOW - some primary shards not...\");\n  \n  // Implementation would depend on specific recommendation\n  // This is a placeholder for custom optimization logic\n  \n  try {\n    // Perform optimization based on recommendation\n    console.log(\"Check replica settings and node availability\");\n    \n    return {\n      success: true,\n      message: \"Generic optimization completed\",\n      recommendation: \"Cluster health is YELLOW - some primary shards not replicated\",\n      estimatedImpact: 0.7\n    };\n  } catch (error) {\n    console.error(\"Generic optimization failed:\", error);\n    return { \n      success: false, \n      error: error.message,\n      recommendation: \"Cluster health is YELLOW - some primary shards not replicated\"\n    };\n  }\n}\n",
+      "description": "Generic optimization based on research recommendation",
+      "recommendationRef": "Cluster health is YELLOW - some primary shards not replicated",
+      "generatedAt": 1771604431749,
+      "estimatedImpact": 0.7
+    },
+    {
+      "id": "generic_1771621287468",
+      "type": "generic_optimization",
+      "category": "performance",
+      "priority": "HIGH",
+      "code": "\n/**\n * Generic Optimization Implementation\n * Based on research recommendation: Cluster health is YELLOW - some primary shards not replicate...\n */\nasync function genericOptimization(client, options = {}) {\n  console.log(\"Executing generic optimization for: Cluster health is YELLOW - some primary shards not...\");\n  \n  // Implementation would depend on specific recommendation\n  // This is a placeholder for custom optimization logic\n  \n  try {\n    // Perform optimization based on recommendation\n    console.log(\"Check replica settings and node availability\");\n    \n    return {\n      success: true,\n      message: \"Generic optimization completed\",\n      recommendation: \"Cluster health is YELLOW - some primary shards not replicated\",\n      estimatedImpact: 0.7\n    };\n  } catch (error) {\n    console.error(\"Generic optimization failed:\", error);\n    return { \n      success: false, \n      error: error.message,\n      recommendation: \"Cluster health is YELLOW - some primary shards not replicated\"\n    };\n  }\n}\n",
+      "description": "Generic optimization based on research recommendation",
+      "recommendationRef": "Cluster health is YELLOW - some primary shards not replicated",
+      "generatedAt": 1771621287468,
+      "estimatedImpact": 0.7
+    }
+  ]
+}

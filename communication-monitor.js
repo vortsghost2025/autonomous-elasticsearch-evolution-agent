@@ -17,3 +17,4 @@ class CommunicationMonitor {
 }
 
 export { CommunicationMonitor };
+[/**

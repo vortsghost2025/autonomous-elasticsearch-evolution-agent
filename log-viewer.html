@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Agent System Log Viewer</title>
+  <style>
+    body { background: #181c24; color: #f8fafc; font-family: 'Segoe UI',sans-serif; margin:0; padding:0; }
+    .container { max-width: 900px; margin: 40px auto; background: #23293a; border-radius: 12px; box-shadow: 0 4px 24px #0008; padding: 32px; }
+    h1 { text-align: center; margin-bottom: 32px; }
+    .log-box { background: #181c24; border-radius: 8px; padding: 18px; min-height: 400px; font-family: monospace; font-size: 1em; overflow-y: auto; }
+    .log-entry { margin-bottom: 8px; }
+    .log-entry.info { color: #7c3aed; }
+    .log-entry.warn { color: #f59e0b; }
+    .log-entry.error { color: #ef4444; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Agent System Log Viewer</h1>
+    <div class="log-box" id="log-box"></div>
+  </div>
+  <script>
+    // Poll logs from backend every 5 seconds
+    setInterval(fetchLogs, 5000);
+    fetchLogs();
+    function fetchLogs() {
+      fetch('/api/logs')
+        .then(r => r.json())
+        .then(logs => {
+          const box = document.getElementById('log-box');
+          box.innerHTML = '';
+          logs.forEach(entry => {
+            const div = document.createElement('div');
+            div.className = 'log-entry ' + (entry.level || 'info');
+            div.textContent = `[${new Date(entry.timestamp).toLocaleTimeString()}] [${entry.level.toUpperCase()}] ${entry.message}`;
+            box.appendChild(div);
+          });
+        });
+    }
+  </script>
+</body>
+</html>

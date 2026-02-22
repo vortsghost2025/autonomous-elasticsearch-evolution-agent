@@ -98,3 +98,116 @@
 2026-02-20 11:00:02 error: Accept Failed, {"requestId":"","errorCode":"unsupported_error","errorMessage":"workingSpaceFile status is not APPLIED, status:ACCEPTED"}
 2026-02-20 11:07:38 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
 2026-02-20 11:07:38 info: try to create ws connection
+2026-02-20 11:15:05 info: upload image: 11:15:5
+2026-02-20 11:15:07 info: get Image: {"requestId":"","errorCode":"","errorMessage":"","result":{"imageUrl":"https://lingma.alibabacloud.com/algo/api/v2/image/get?filePath=dedicated/38-R69G38ASi6OMjStaNesN6e__jDW2LpPUqrll0asg/175c0f6d-56b7-4472-b46f-869dbf0d6752_1771604106551.png","requestId":"2cfeb903-0697-4337-8af9-e11c1edfcc5d"}}
+2026-02-20 11:15:07 info: get Image success: 11:15:7
+2026-02-20 11:15:28 info: upload image: 11:15:28
+2026-02-20 11:15:29 info: get Image: {"requestId":"","errorCode":"","errorMessage":"","result":{"imageUrl":"https://lingma.alibabacloud.com/algo/api/v2/image/get?filePath=dedicated/38-R69G38ASi6OMjStaNesN6e__jDW2LpPUqrll0asg/7fa23fc2-38e9-4716-a665-5c4d435b1e31_1771604128799.png","requestId":"de37e546-7b05-4ca4-a6e3-5c5343628b61"}}
+2026-02-20 11:15:29 info: get Image success: 11:15:29
+2026-02-20 11:16:14 info: upload image: 11:16:14
+2026-02-20 11:16:15 info: get Image: {"requestId":"","errorCode":"","errorMessage":"","result":{"imageUrl":"https://lingma.alibabacloud.com/algo/api/v2/image/get?filePath=dedicated/38-R69G38ASi6OMjStaNesN6e__jDW2LpPUqrll0asg/5074a3f2-7b33-4e57-b9a2-8305c7f68a1c_1771604174916.png","requestId":"b6fbbf38-73dc-4016-86da-f938d58aa3a2"}}
+2026-02-20 11:16:15 info: get Image success: 11:16:15
+2026-02-20 11:17:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 11:17:48 info: try to create ws connection
+2026-02-20 11:26:08 info: upload image: 11:26:8
+2026-02-20 11:26:09 info: get Image: {"requestId":"","errorCode":"","errorMessage":"","result":{"imageUrl":"https://lingma.alibabacloud.com/algo/api/v2/image/get?filePath=dedicated/38-R69G38ASi6OMjStaNesN6e__jDW2LpPUqrll0asg/710e94a6-7232-44c0-acaa-7592f519891f_1771604769458.png","requestId":"5d7433ba-ac78-4b8b-a691-88e13e6c5b93"}}
+2026-02-20 11:26:09 info: get Image success: 11:26:9
+2026-02-20 11:26:22 info: upload image: 11:26:22
+2026-02-20 11:26:24 info: get Image: {"requestId":"","errorCode":"","errorMessage":"","result":{"imageUrl":"https://lingma.alibabacloud.com/algo/api/v2/image/get?filePath=dedicated/38-R69G38ASi6OMjStaNesN6e__jDW2LpPUqrll0asg/b86e620f-1104-442e-9870-3141a22b088e_1771604783515.png","requestId":"ea6bce66-e498-4ccd-92e6-307a26497a9c"}}
+2026-02-20 11:26:24 info: get Image success: 11:26:24
+2026-02-20 11:27:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 11:27:48 info: try to create ws connection
+2026-02-20 11:37:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 11:37:48 info: try to create ws connection
+2026-02-20 11:47:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 11:47:48 info: try to create ws connection
+2026-02-20 11:57:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 11:57:48 info: try to create ws connection
+2026-02-20 12:07:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 12:07:48 info: try to create ws connection
+2026-02-20 12:11:27 info: upload image: 12:11:27
+2026-02-20 12:11:29 info: get Image: {"requestId":"","errorCode":"","errorMessage":"","result":{"imageUrl":"https://lingma.alibabacloud.com/algo/api/v2/image/get?filePath=dedicated/38-R69G38ASi6OMjStaNesN6e__jDW2LpPUqrll0asg/936bcdc2-acaa-44d1-b382-9754ff9bb5f6_1771607488545.png","requestId":"4d056eb8-a5d4-4882-9546-81d463afb1cb"}}
+2026-02-20 12:11:29 info: get Image success: 12:11:29
+2026-02-20 12:12:43 info: upload image: 12:12:43
+2026-02-20 12:12:44 info: get Image: {"requestId":"","errorCode":"","errorMessage":"","result":{"imageUrl":"https://lingma.alibabacloud.com/algo/api/v2/image/get?filePath=dedicated/38-R69G38ASi6OMjStaNesN6e__jDW2LpPUqrll0asg/2d3c9bfa-4677-4435-8b99-193152047329_1771607563845.png","requestId":"4dabc269-0b40-4389-97d0-7a68cf45c5c6"}}
+2026-02-20 12:12:44 info: get Image success: 12:12:44
+2026-02-20 12:17:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 12:17:48 info: try to create ws connection
+2026-02-20 12:27:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 12:27:48 info: try to create ws connection
+2026-02-20 12:29:53 error: TOOL_INVOKE_RESULT run_in_terminal exec Error! call_3515d10d1e654da59b083188
+2026-02-20 12:29:53 error: TOOL_INVOKE_RESULT run_in_terminal wait stream timeout call_3515d10d1e654da59b083188
+2026-02-20 12:30:18 error: TOOL_INVOKE_RESULT run_in_terminal exec Error! call_392617c9774741108f70ce87
+2026-02-20 12:30:18 error: TOOL_INVOKE_RESULT run_in_terminal wait stream timeout call_392617c9774741108f70ce87
+2026-02-20 12:35:34 error: Accept Failed, {"requestId":"","errorCode":"unsupported_error","errorMessage":"workingSpaceFile status is not APPLIED, status:ACCEPTED"}
+2026-02-20 12:37:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 12:37:48 info: try to create ws connection
+2026-02-20 12:47:33 info: upload image: 12:47:33
+2026-02-20 12:47:33 info: get Image: {"requestId":"","errorCode":"","errorMessage":"","result":{"imageUrl":"https://lingma.alibabacloud.com/algo/api/v2/image/get?filePath=dedicated/38-R69G38ASi6OMjStaNesN6e__jDW2LpPUqrll0asg/a3991a2b-2b17-4f1f-b746-113a76aa0174_1771609653440.png","requestId":"fd6b7d74-ac37-4022-ab65-5e0034433bbb"}}
+2026-02-20 12:47:33 info: get Image success: 12:47:33
+2026-02-20 12:47:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 12:47:48 info: try to create ws connection
+2026-02-20 12:56:56 error: Accept Failed, {"requestId":"","errorCode":"unsupported_error","errorMessage":"workingSpaceFile status is not APPLIED, status:ACCEPTED"}
+2026-02-20 12:57:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 12:57:48 info: try to create ws connection
+2026-02-20 13:07:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 13:07:48 info: try to create ws connection
+2026-02-20 13:17:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 13:17:48 info: try to create ws connection
+2026-02-20 13:23:25 error: TOOL_INVOKE_RESULT run_in_terminal exec Error! call_e37451d7130545739a75852e
+2026-02-20 13:23:25 error: TOOL_INVOKE_RESULT run_in_terminal wait stream timeout call_e37451d7130545739a75852e
+2026-02-20 13:27:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 13:27:48 info: try to create ws connection
+2026-02-20 13:33:13 error: TOOL_INVOKE_RESULT run_in_terminal exec Error! call_0b5bc0976f4c47d2be29462c
+2026-02-20 13:33:13 error: TOOL_INVOKE_RESULT run_in_terminal wait stream timeout call_0b5bc0976f4c47d2be29462c
+2026-02-20 13:37:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 13:37:48 info: try to create ws connection
+2026-02-20 13:47:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 13:47:48 info: try to create ws connection
+2026-02-20 13:47:52 info: upload image: 13:47:52
+2026-02-20 13:47:52 info: get Image: {"requestId":"","errorCode":"","errorMessage":"","result":{"imageUrl":"https://lingma.alibabacloud.com/algo/api/v2/image/get?filePath=dedicated/38-R69G38ASi6OMjStaNesN6e__jDW2LpPUqrll0asg/0ea8f62d-97c4-4184-93b5-8d0846d5da46_1771613272340.png","requestId":"4f020d01-66a2-4a7e-aef7-3b7561491a3e"}}
+2026-02-20 13:47:52 info: get Image success: 13:47:52
+2026-02-20 13:57:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 13:57:48 info: try to create ws connection
+2026-02-20 14:07:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 14:07:48 info: try to create ws connection
+2026-02-20 14:17:36 info: auth status synced. id=seandavidramsingh@gmail.com, status=2, whitelist=3, token=
+2026-02-20 14:17:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 14:17:48 info: try to create ws connection
+2026-02-20 14:27:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 14:27:48 info: try to create ws connection
+2026-02-20 14:37:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 14:37:48 info: try to create ws connection
+2026-02-20 14:47:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 14:47:48 info: try to create ws connection
+2026-02-20 14:57:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 14:57:48 info: try to create ws connection
+2026-02-20 15:07:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 15:07:48 info: try to create ws connection
+2026-02-20 15:17:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 15:17:48 info: try to create ws connection
+2026-02-20 15:27:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 15:27:48 info: try to create ws connection
+2026-02-20 15:37:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 15:37:48 info: try to create ws connection
+2026-02-20 15:47:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 15:47:48 info: try to create ws connection
+2026-02-20 15:57:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 15:57:48 info: try to create ws connection
+2026-02-20 16:07:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 16:07:48 info: try to create ws connection
+2026-02-20 16:17:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 16:17:48 info: try to create ws connection
+2026-02-20 16:27:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 16:27:48 info: try to create ws connection
+2026-02-20 16:37:48 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 16:37:48 info: try to create ws connection
+2026-02-20 16:38:27 info: Lingma [version: 2.5.20, lang: en, platform: win32, arch: x64, appName=Visual Studio Code, runMode: local, extensionKind=1, remoteName=undefined, wsl=undefined, remoteContainers=undefined, extensionMode=1] is starting now!
+2026-02-20 16:38:27 info: Congratulations, "Lingma" is now active!
+2026-02-20 16:38:29 info: check exist binary path, no need update.
+2026-02-20 16:38:29 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 16:38:29 info: .info exist. infoFile=C:\autonomous-elasticsearch-evolution-agent\sharedClientCache\.info
+2026-02-20 16:38:29 info: Lingma try to connect to language server.
+2026-02-20 16:38:29 info: try to create ws connection
+2026-02-20 16:38:30 info: Lingma connected to language server successfully.
+2026-02-20 16:38:31 info: auth status synced. id=seandavidramsingh@gmail.com, status=2, whitelist=3, token=

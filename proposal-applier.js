@@ -1,4 +1,4 @@
-import PersistentMemory from './persistent-memory.js';
+import { PersistentMemory } from './persistent-memory.js';
 
 export class ProposalApplier {
   constructor(esClient, options = {}) {

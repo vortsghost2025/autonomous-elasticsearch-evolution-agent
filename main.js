@@ -38,7 +38,7 @@ async function initializeSystem() {
 
     // 1. Heartbeat Pinger
     const heartbeat = new RaccoonHeartbeat(3000);
-    heartbeat.on('heartbeat', (event) => {
+    [/**
         console.log(`[HEARTBEAT] ${event.time}`);
         // Optionally: broadcast to dashboard
     });
