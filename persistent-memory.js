@@ -115,6 +115,37 @@ export class PersistentMemory {
     }
   }
 
+  get(key, defaultValue = undefined) {
+    return this.data.hasOwnProperty(key) ? this.data[key] : defaultValue;
+  }
+
+  async set(key, value) {
+    this.data[key] = value;
+    await this.save();
+  }
+
+  async retrieveAgentState() {
+    return this.get('agentState', null);
+  }
+
+  async storeAgentState(state) {
+    await this.set('agentState', state);
+  }
+
+  async addToOptimizationHistory(entry) {
+    const history = this.get('optimizationHistory', []);
+    history.push(entry);
+    await this.set('optimizationHistory', history);
+  }
+
+  async logError(error) {
+    const errors = this.get('errorLog', []);
+    errors.push({ message: error.message, stack: error.stack, timestamp: Date.now() });
+    // Keep last 100 errors only
+    if (errors.length > 100) errors.splice(0, errors.length - 100);
+    await this.set('errorLog', errors);
+  }
+
   /**
    * Save memory to persistent storage with atomic operations
    */

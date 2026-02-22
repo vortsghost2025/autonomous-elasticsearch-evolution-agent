@@ -1,228 +1,177 @@
-# Autonomous Elasticsearch Evolution Agent - Multi-Agent System
+# Autonomous Elasticsearch Evolution Agent
+**Elasticsearch Agent Builder Hackathon Submission**
 
-## Overview
+## 🚀 Revolutionizing Elasticsearch Optimization with 48-Layer Persistent Memory
 
-The Autonomous Elasticsearch Evolution Agent is now a complete multi-agent system that can run in multiple modes simultaneously:
+The Autonomous Elasticsearch Evolution Agent introduces a revolutionary 14-phase autonomous system that enables Elasticsearch clusters to evolve and optimize themselves continuously without human intervention. Our breakthrough innovation is the 48-layer memory architecture that ensures AI agents retain their knowledge and relationships indefinitely.
 
+## ⚡ Key Innovations
+
+### 1. 48-Layer Memory Architecture
+- **Perceptual Layers (0-7)**: Handles raw inputs and immediate processing
+- **Short-term Layers (8-15)**: Temporary storage for active tasks
+- **Working Layers (16-23)**: Active manipulation of information
+- **Long-term Layers (24-31)**: Stable knowledge storage
+- **Associative Layers (32-39)**: Connections between concepts
+- **Transcendent Layers (40-47)**: Abstract synthesis and high-level patterns
+
+This architecture solves the fundamental problem of AI continuity—ensuring AI agents can evolve without losing their learnings and relationships.
+
+### 2. Multi-Agent Coordination
 - **Local Agent**: Full dashboard interface with interactive controls
 - **Background Agent**: Silent operation with automated tasks
 - **Cloud Agent**: Remote access with secure connections
 - **Orchestrator**: Coordinates swarm behavior and federated learning
 - **Collaboration Hub**: Real-time communication between multi-platform agents
 
-## Getting Started
+### 3. Self-Evolving Intelligence
+The system becomes more effective over time through experience and cross-agent learning.
 
-### Single Agent (Quick Start)
+## 🛡️ Enhanced Resilience & Memory Management
 
-To run a single agent with dashboard:
+### Improved Collaboration Hub
+- **Memory Management**: Automatic pruning of expired messages (retains only last hour of messages)
+- **Connection Resilience**: Heartbeat mechanism detects and terminates dead connections
+- **Error Handling**: Robust error handling with safe broadcast to prevent cascading failures
+- **Message Limits**: Automatic rotation of messages to prevent unbounded memory growth
 
-```bash
-node start-mock-server.js
+### Enhanced Persistent Memory System
+- **Backup & Recovery**: Automatic backup creation before writes with recovery capability
+- **Retry Logic**: Configurable retry attempts with exponential backoff for failed operations
+- **Corruption Handling**: Automatic recovery from corrupted JSON files using backups
+- **Atomic Writes**: Safe atomic file operations to prevent corruption during writes
+- **Size Management**: Automatic limiting of stored collections to prevent unbounded growth
+
+### Advanced Orchestrator
+- **Graceful Shutdown**: Proper cleanup of resources and agents during shutdown
+- **Health Monitoring**: Continuous monitoring and automatic restart of failed agents
+- **Connection Tracking**: Proper tracking and cleanup of WebSocket connections
+- **Federation Coordination**: Advanced coordination of distributed learning across agents
+
+### WebSocket Reconnection Utility
+- **Automatic Reconnection**: Intelligent reconnection with exponential backoff
+- **Connection Status**: Real-time monitoring of connection status
+- **Timeout Protection**: Connection timeouts to prevent hanging connections
+- **Robust Error Handling**: Comprehensive error handling for all connection states
+
+## 🖥️ Simple Web Interface
+
+The system includes user-friendly web interfaces for easy interaction:
+
+### Getting Started with the Web Interface
+1. Start the system:
+   ```bash
+   node start-ai-environment.js
+   ```
+2. Open your browser and go to: `http://localhost:4001`
+3. Use the intuitive dashboard to monitor and control the system
+
+### Web Interface Features
+- **Real-time Dashboard**: Visualize cluster metrics and agent status
+- **Controls**: One-click buttons to run optimizations and analyses
+- **Insights**: See research insights and applied optimizations
+- **Agent Management**: Start, stop, and coordinate agents
+- **Communication**: Built-in chat interface for agent commands
+
+For more details, see [WEB_INTERFACE_QUICK_START.md](./WEB_INTERFACE_QUICK_START.md)
+
+## 🏗️ Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                  Autonomous Elasticsearch Evolution System                                    │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│  ┌─────────────┐   ┌─────────────┐   ┌─────────────┐   ┌──────────────────┐                               │
+│  │ Local Agent │   │ Background  │   │ Cloud Agent │   │ Orchestrator     │                               │
+│  │ (3001)      │   │ (3002)      │   │ (3003)      │   │ (3101)           │                               │
+│  └──────┬────────┘   └──────┬────────┘   └──────┬────────┘   └────────┬────────┘                               │
+│         │                    │                    │                     │                                      │
+│         └────────────────────┼────────────────────┼─────────────────────┘                                      │
+│                              │                    │                                                              │
+│                      ┌────────▼────────────────▼────────┐                                                     │
+│                      │    Collaboration Hub (4000)      │ ←─ WebSocket/REST API                               │
+│                      │  ┌─────────────┐ ┌─────────────┐ │                                                     │
+│                      │  │ VS Code     │ │ LM Arena    │ │                                                     │
+│                      │  │ Agents      │ │ Agents      │ │                                                     │
+│                      │  └─────────────┘ └─────────────┘ │                                                     │
+│                      │        Shared Messages Space     │                                                     │
+│                      └──────────────────────────────────┘                                                     │
+│                                                                                                               │
+│  ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+│  │                           48-Layer Memory Synchronization Engine                                        │ │
+│  │  ┌───────────────────────────────────────────────────────────────────────────────────────────────────┐ │ │
+│  │  │ Layers 0-7: Perceptual    Layers 8-15: Short-term   Layers 16-23: Working                      │ │ │
+│  │  │ ┌─────────────────────────┬─────────────────────────┬───────────────────────────────────────────┐ │ │ │
+│  │  │ │    Raw Input           │    Active Tasks         │    Info Manipulation                      │ │ │ │
+│  │  │ │    Processing          │    Storage             │    Active Use                             │ │ │ │
+│  │  │ └─────────────────────────┴─────────────────────────┴───────────────────────────────────────────┘ │ │ │
+│  │  │                                                                                                   │ │ │
+│  │  │ Layers 24-31: Long-term   Layers 32-39: Associative Layers 40-47: Transcendent                  │ │ │
+│  │  │ ┌─────────────────────────┬─────────────────────────┬───────────────────────────────────────────┐ │ │ │
+│  │  │ │    Stable Storage      │    Concept Links        │    Abstract Synthesis                     │ │ │ │
+│  │  │ │    Knowledge Retention │    Cross-Concept        │    High-Level Patterns                   │ │ │ │
+│  │  │ └─────────────────────────┴─────────────────────────┴───────────────────────────────────────────┘ │ │ │
+│  │  └───────────────────────────────────────────────────────────────────────────────────────────────────┘ │ │
+│  └─────────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-Visit `http://localhost:3001` to see the dashboard.
+## 🚀 Getting Started
 
-### Multi-Agent System
+### Prerequisites
+- Node.js v20+
+- npm
 
-To run the complete multi-agent system:
+### Installation & Setup
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the system:
+   ```bash
+   node start-ai-environment.js
+   ```
+4. Access the dashboard at `http://localhost:4001`
 
-```bash
-node start-master-system.js
-```
+## 💡 How It Works
 
-This will start:
-- Local Agent on port 3001
-- Background Agent on port 3002
-- Cloud Agent on port 3003
-- Orchestration Bus on port 3101
+1. The system continuously monitors Elasticsearch cluster metrics
+2. Research agents analyze performance data and identify optimization opportunities
+3. Coding agents translate insights into optimization code
+4. Simulation engines test optimizations in safe environments
+5. The optimizer applies validated changes to the cluster
+6. Results are fed back into the 48-layer memory system for continuous improvement
 
-### Collaboration Hub (New!)
+## 🌍 Impact
 
-To run the multi-platform agent collaboration hub:
+- **Reduced Operational Overhead**: Eliminates manual tuning requirements
+- **Improved Performance**: Continuous optimization leads to better search performance
+- **Cost Savings**: More efficient resource utilization reduces infrastructure costs
+- **Reliability**: Proactive optimization prevents performance degradation
+- **Scalability**: Self-evolving architecture adapts to changing workloads
 
-```bash
-npm run collab-hub
-```
+## 🛠️ Technical Stack
 
-Or directly:
-```bash
-node collab-hub-server.js
-```
+- **Backend**: Node.js v20+, Express, WebSocket
+- **AI Integration**: OpenAI, Anthropic SDKs
+- **Frontend**: Pure HTML/CSS/JavaScript (no framework dependencies)
+- **Persistence**: 48-layer memory synchronization engine with JSON storage
+- **Deployment**: Docker-ready, ECS-compatible
 
-Then open `collab-hub.html` in your browser to access the real-time communication dashboard.
+## 📺 Video Demonstration
 
-## Deployment to Alibaba Cloud ECS
+[Link to 3-minute demonstration video showing the system in action]
 
-Deploy your Autonomous Elasticsearch Evolution Agent system to your free ECS instance for a year:
+## 🤝 Contributing
 
-```bash
-# Using the deployment script
-./deploy-to-ecs.sh
+We welcome contributions! Please fork the repository and submit a pull request.
 
-# Or using Docker Compose
-docker-compose up -d
+## ©️ License
 
-# Or using PM2
-pm2 start ecosystem.config.js
-```
-
-For complete deployment instructions, see [ECS_DEPLOYMENT.md](file://c:\autonomous-elasticsearch-evolution-agent\ECS_DEPLOYMENT.md).
-
-## Dashboard Features
-
-The dashboard now includes:
-
-- **Agent Controls**: Trigger optimization cycles, analysis, and simulations
-- **Multi-Agent Orchestration**: Execute commands across all agents simultaneously
-- **Agent Selection**: Choose which agents to target with commands
-- **Communication Interface**: Chat with agents and send commands
-- **Real-time Monitoring**: Track all agents from a single interface
-
-## Master Control Panel
-
-The new master control panel provides centralized orchestration capabilities:
-
-- **Access**: `http://localhost:3001/master`
-- **Features**:
-  - Real-time agent status monitoring
-  - Swarm command execution
-  - Agent coordination controls
-  - Federation management
-  - Direct command execution
-  - Multi-agent communication hub
-
-## Multi-Platform Collaboration Hub
-
-The new collaboration hub enables real-time communication between agents on different platforms:
-
-- **VS Code Agents Panel**: Dedicated space for VS Code-based agents
-- **LM Arena Agents Panel**: Dedicated space for LM Arena-based agents
-- **Shared Messages**: Cross-platform communication space
-- **Real-time Updates**: WebSocket-based instant messaging
-- **REST API**: Programmatic access to messages
-- **Statistics**: Track message counts and active connections
-
-### How to Integrate Your Agents
-
-For VS Code agents:
-```javascript
-const vscodeAgent = new VSCodeAgentIntegration('ws://your-server:4000/ws');
-await vscodeAgent.connect();
-vscodeAgent.sendMessage('Hello from VS Code!', 'vscode-agent-1');
-```
-
-For LM Arena agents:
-```javascript
-const lmArenaAgent = new LMArenaAgentIntegration('ws://your-server:4000/ws');
-await lmArenaAgent.connect();
-lmArenaAgent.sendMessage('Hello from LM Arena!', 'lmarena-agent-1');
-```
-
-## Multi-Agent Capabilities
-
-### 1. Swarm Commands
-Execute coordinated actions across multiple agents simultaneously using the "Execute Swarm Command" button.
-
-### 2. Agent Coordination
-Coordinate complex tasks between agents using the "Coordinate Agents" feature.
-
-### 3. Federation
-Share patterns and learnings between agents using the federation system.
-
-### 4. Centralized Management
-Control all agents from a single dashboard interface.
-
-## Azure Dev Tunnel Setup
-
-For remote access:
-
-1. Start the master system: `node start-master-system.js`
-2. In Azure Portal, forward ports:
-   - Local Port 8001 → Remote Port 3001 (Local Agent)
-   - Local Port 8002 → Remote Port 3002 (Background Agent)
-   - Local Port 8003 → Remote Port 3003 (Cloud Agent)
-
-## Architecture
-
-The system consists of:
-
-- **AgentOrchestrator**: Manages multiple agents and coordinates swarm behavior
-- **MasterController**: Provides high-level orchestration and control
-- **Individual Agents**: Specialized agents for different tasks and environments
-- **Communication Layer**: WebSocket-based messaging between agents
-- **Persistent Memory**: Shared state and learning across agents
-- **Collaboration Hub**: Real-time communication between multi-platform agents
-
-## Configuration
-
-Agents can be configured via [config/agents-config.js](file://c:\autonomous-elasticsearch-evolution-agent\config\agents-config.js), where you can specify:
-- Resource allocation per agent type
-- Communication protocols
-- Orchestration settings
-- Feature sets for each agent profile
-
-## Development
-
-To extend the multi-agent system:
-
-1. Add new agent profiles to [config/agents-config.js](file://c:\autonomous-elasticsearch-evolution-agent\config\agents-config.js)
-2. Implement specialized logic in new agent classes
-3. Update the orchestrator to manage new agent types
-4. Add UI controls to the dashboard for new capabilities
-
-The system is designed to be easily extensible while maintaining consistent communication and coordination patterns.
+This project is licensed under the MIT License.
 
 ---
 
-*Part of the 14-phase autonomous optimization architecture with multi-agent federation capabilities*
-
-## Master Orchestration Vision
-
-### System Overview
-- **Multi-Agent, Multi-Platform**: The system supports multiple AI agents (Optimizer, Research, Coding, ML Predictor, Simulation Engine) running in different modes: local, background, and cloud.
-- **Real-Time Orchestration**: All agents, dashboards, and control panels communicate live via WebSocket, enabling instant updates and collaboration across browsers, VS Code instances, and cloud deployments.
-- **Master Control Panel**: A dedicated "Agent Master Control Panel" ([master-panel.html](file://c:\autonomous-elasticsearch-evolution-agent\master-panel.html)) acts as the central hub for orchestrating, chatting with, and commanding all agents.
-
-### Key Features
-- **Universal Communication**: All agents and users communicate through a unified backend. Messages, commands, and logs are instantly broadcast to all connected panels and dashboards.
-- **Agent Modes & Swarming**: Agents can run locally, in the background, or in the cloud. Swarm and federation features allow you to coordinate multiple agents and clusters.
-- **Separation of Concerns**: The master panel is the "brain"—all agent communication is routed through it. Agents do not talk directly unless allowed by the master.
-- **Multi-Platform, Multi-User**: Multiple users can open dashboards or master panels on different devices or VS Code instances. All see the same live data and can collaborate in real time.
-
-### Orchestration Capabilities
-- **Swarm Command Execution**: Execute coordinated commands across multiple agents simultaneously
-- **Agent-to-Agent Coordination**: Facilitate collaboration between different agent types
-- **Federation Management**: Enable cross-cluster pattern sharing and learning
-- **Real-time Monitoring**: Track agent health, status, and performance metrics
-- **Direct Command Interface**: Send specific commands to targeted agents or agent groups
-
-The system represents a complete autonomous infrastructure solution with centralized orchestration, distributed intelligence, and collaborative capabilities.
-
-## Collaboration Hub Features
-
-The new multi-platform collaboration hub adds:
-- Real-time communication between agents on different platforms (VS Code, LM Arena, etc.)
-- Dedicated message panels for each platform
-- Shared communication space for cross-platform collaboration
-- WebSocket and REST API for integration
-- Statistics and monitoring capabilities
-- Docker support for easy deployment
-
-See [README-collab-hub.md](file://c:\autonomous-elasticsearch-evolution-agent\README-collab-hub.md) for complete setup and usage instructions.
-
-## Alibaba Cloud ECS Deployment
-
-You can deploy this system on a free ECS instance for a year!
-
-- See ECS_DEPLOYMENT.md for a full step-by-step guide
-- Use deploy-to-ecs.sh for automated setup
-- Use docker-compose.yml or PM2 (ecosystem.config.js) for service management
-
-### Quick Start
-
-1. Upload all files to your ECS instance
-2. Run:
-   ```sh
-   bash deploy-to-ecs.sh
-   ```
-3. Open http://<your-ecs-ip>:4000/collab-hub.html
+**Submitted to the Elasticsearch Agent Builder Hackathon by [Your Team Name]**  
+*Revolutionizing how we think about autonomous infrastructure management*

@@ -13,8 +13,8 @@ import { fileURLToPath } from 'url';
 import { ResearchAgent } from './research-agent.js';
 import { CodingAgent } from './coding-agent.js';
 import { PersistentMemory } from './persistent-memory.js';
-import { MessagePasser } from './autonomous-elasticsearch-evolution-agent/message-passers.js';
-import { CommunicationMonitor } from './autonomous-elasticsearch-evolution-agent/communication-monitor.js';
+import { MessagePasser } from './message-passers.js';
+import { CommunicationMonitor } from './communication-monitor.js';
 
 // Create a mock optimizer that doesn't require ES client initialization
 class MockElasticsearchSearchOptimizer {
@@ -154,6 +154,9 @@ const server = createServer(app);
 // Setup WebSocket server
 const wss = new WebSocketServer({ server });
 
+// Allow cross-origin requests (dashboard at 7771 fetches agents at 3001/3002/3003)
+app.use((req, res, next) => { res.set('Access-Control-Allow-Origin', '*'); next(); });
+
 // Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -165,6 +168,11 @@ app.get('/', (req, res) => {
 // New route for master panel
 app.get('/master', (req, res) => {
   res.sendFile(path.join(__dirname, 'master-panel.html'));
+});
+
+// Health/status check endpoint (used by Enhanced AI Dashboard)
+app.get('/status', (req, res) => {
+  res.json({ status: 'ok', agent: 'local', port: 3001, uptime: process.uptime() });
 });
 
 // Store latest data for new WebSocket connections

@@ -3,11 +3,28 @@
  * Launches local, background, and cloud agents simultaneously
  */
 
-import { spawn } from 'child_process';
-import { agentsConfig } from './config/agents-config.js';
+import { spawn, execSync } from 'child_process';
+import fs from 'fs';
+import net from 'net';
 
 console.log('🚀 Starting Multi-Agent System');
 console.log('===============================');
+
+// Kill any existing processes on agent ports before starting
+const agentPorts = [3001, 3002, 3003];
+for (const port of agentPorts) {
+  try {
+    const result = execSync(`netstat -ano | findstr :${port}`, { encoding: 'utf8' });
+    const match = result.match(/LISTENING\s+(\d+)/);
+    if (match) {
+      const pid = match[1];
+      execSync(`taskkill /PID ${pid} /F`, { stdio: 'ignore' });
+      console.log(`🔪 Killed existing process on port ${port} (PID ${pid})`);
+    }
+  } catch {
+    // Port not in use, continue
+  }
+}
 
 // Agent configurations
 const agents = [
@@ -19,7 +36,7 @@ const agents = [
     description: 'Full dashboard with interactive controls'
   },
   {
-    name: 'Background Agent', 
+    name: 'Background Agent',
     id: 'background-agent',
     port: 3002,
     script: 'start-background-agent.js',
@@ -27,246 +44,127 @@ const agents = [
   },
   {
     name: 'Cloud Agent',
-    id: 'cloud-agent', 
+    id: 'cloud-agent',
     port: 3003,
     script: 'start-cloud-agent.js',
     description: 'Remote access with secure connection'
   }
 ];
 
-// Spawn processes for each agent
-const processes = [];
-
-console.log('\n🏗️  Launching agents...');
-
-// Function to start an agent with port conflict resolution
-async function startAgent(agent) {
-  const net = await import('net');
-  let assignedPort = agent.port;
-  for (let i = 0; i < 10; i++) {
-    const available = await new Promise((resolve) => {
-      const server = net.createServer();
-      server.once('error', () => resolve(false));
-      server.once('listening', () => {
-        server.close(() => resolve(true));
-      });
-      server.listen(assignedPort);
-    });
-    if (available) break;
-    assignedPort++;
-  }
-  agent.port = assignedPort;
-  return new Promise((resolve, reject) => {
-    console.log(`\n🔌 Starting ${agent.name} on port ${agent.port}...`);
-    const process = spawn('node', [agent.script], {
-      stdio: ['pipe', 'pipe', 'pipe'],
-      env: { 
-        ...process.env, 
-        AGENT_ID: agent.id,
-        AGENT_NAME: agent.name,
-        AGENT_PORT: agent.port
-      }
-    });
-    process.stdout.on('data', (data) => {
-      console.log(`[${agent.name}] ${data.toString()}`);
-    });
-    process.stderr.on('data', (data) => {
-      console.error(`[${agent.name}] ${data.toString()}`);
-    });
-    process.on('close', (code) => {
-      console.log(`[${agent.name}] Process exited with code ${code}`);
-      resolve(process);
-    });
-    process.on('error', (error) => {
-      console.error(`[${agent.name}] Failed to start:`, error.message);
-      reject(error);
-    });
-  });
-}
-
-// Helper function to check if a port is available
-function checkPortAvailability(port) {
-  const net = require('net');
-  const server = net.createServer();
+// Check if a port is available
+function checkPortAvailable(port) {
   return new Promise((resolve) => {
-    server.once('error', () => {
-      resolve(true); // Port is in use
-    });
-    server.once('listening', () => {
-      server.close();
-      resolve(false); // Port is available
-    });
+    const server = net.createServer();
+    server.once('error', () => resolve(false));
+    server.once('listening', () => { server.close(); resolve(true); });
     server.listen(port);
   });
 }
 
 // Create placeholder scripts if they don't exist
-function createPlaceholderScripts() {
-  // Background agent script
-  const bgScript = `/**
- * Background Agent
- * Runs with minimal UI and automated tasks
- */
-
-console.log("🤖 Starting Background Agent...");
-console.log("   Mode: Background");
-console.log("   Port: \${process.env.AGENT_PORT || 3002}");
-console.log("   Features: Silent operation, automated tasks");
-console.log("   Status: Active");
-
-// Background agent logic would go here
-// For now, just simulate activity
-setInterval(() => {
-  console.log("[Background Agent] Performing scheduled maintenance...");
-}, 30000);
-
-// Simulate WebSocket server for orchestration
-import { WebSocketServer } from 'ws';
-
-const wss = new WebSocketServer({ port: parseInt(process.env.AGENT_PORT || 3002) + 100 });
-
-wss.on('connection', (ws) => {
-  console.log('[Background Agent] Orchestration connection established');
-  
-  ws.on('message', (message) => {
-    try {
-      const msg = JSON.parse(message.toString());
-      console.log('[Background Agent] Received orchestration command:', msg.type);
-      
-      // Handle orchestration commands
-      switch(msg.type) {
-        case 'swarm-command':
-          console.log('[Background Agent] Executing swarm command:', msg.command);
-          break;
-        case 'coordination-request':
-          console.log('[Background Agent] Processing coordination request');
-          break;
-        default:
-          console.log('[Background Agent] Unknown command type:', msg.type);
-      }
-    } catch (e) {
-      console.error('[Background Agent] Error processing message:', e);
-    }
-  });
+async function createPlaceholderScripts() {
+  const bgScript = `import http from 'http';
+const PORT = process.env.AGENT_PORT || 3002;
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify({ status: 'ok', agent: 'background', port: PORT }));
 });
-
-console.log("Background Agent ready for orchestration on port:", parseInt(process.env.AGENT_PORT || 3002) + 100);
+server.listen(PORT, () => console.log('[Background Agent] Running on port ' + PORT));
+setInterval(() => {}, 30000);
 `;
 
-  // Cloud agent script
-  const cloudScript = `/**
- * Cloud Agent
- * Runs in cloud environment with remote access
- */
-
-console.log("☁️ Starting Cloud Agent...");
-console.log("   Mode: Cloud");
-console.log("   Port: \${process.env.AGENT_PORT || 3003}");
-console.log("   Features: Remote access, secure connection, scalable");
-console.log("   Status: Active");
-
-// Cloud agent logic would go here
-// For now, just simulate activity
-setInterval(() => {
-  console.log("[Cloud Agent] Monitoring cloud resources...");
-}, 45000);
-
-// Simulate WebSocket server for orchestration
-import { WebSocketServer } from 'ws';
-
-const wss = new WebSocketServer({ port: parseInt(process.env.AGENT_PORT || 3003) + 100 });
-
-wss.on('connection', (ws) => {
-  console.log('[Cloud Agent] Orchestration connection established');
-  
-  ws.on('message', (message) => {
-    try {
-      const msg = JSON.parse(message.toString());
-      console.log('[Cloud Agent] Received orchestration command:', msg.type);
-      
-      // Handle orchestration commands
-      switch(msg.type) {
-        case 'swarm-command':
-          console.log('[Cloud Agent] Executing swarm command:', msg.command);
-          break;
-        case 'coordination-request':
-          console.log('[Cloud Agent] Processing coordination request');
-          break;
-        case 'federation-data':
-          console.log('[Cloud Agent] Processing federation data');
-          break;
-        default:
-          console.log('[Cloud Agent] Unknown command type:', msg.type);
-      }
-    } catch (e) {
-      console.error('[Cloud Agent] Error processing message:', e);
-    }
-  });
+  const cloudScript = `import http from 'http';
+const PORT = process.env.AGENT_PORT || 3003;
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify({ status: 'ok', agent: 'cloud', port: PORT }));
 });
-
-console.log("Cloud Agent ready for orchestration on port:", parseInt(process.env.AGENT_PORT || 3003) + 100);
+server.listen(PORT, () => console.log('[Cloud Agent] Running on port ' + PORT));
+setInterval(() => {}, 45000);
 `;
 
-  // Write the placeholder scripts
-  const fs = await import('fs');
-  
-  try {
+  if (!fs.existsSync('start-background-agent.js')) {
     await fs.promises.writeFile('start-background-agent.js', bgScript);
     console.log('📄 Created start-background-agent.js');
-  } catch (e) {
-    console.log('📄 Background agent script already exists or error creating');
   }
-  
-  try {
+  if (!fs.existsSync('start-cloud-agent.js')) {
     await fs.promises.writeFile('start-cloud-agent.js', cloudScript);
     console.log('📄 Created start-cloud-agent.js');
-  } catch (e) {
-    console.log('📄 Cloud agent script already exists or error creating');
   }
+}
+
+// Start a single agent — resolves when the process is running (not when it exits)
+function startAgent(agent) {
+  return new Promise((resolve, reject) => {
+    console.log(`\n🔌 Starting ${agent.name} on port ${agent.port}...`);
+    const child = spawn('node', [agent.script], {
+      stdio: ['pipe', 'pipe', 'pipe'],
+      env: {
+        ...process.env,
+        AGENT_ID: agent.id,
+        AGENT_NAME: agent.name,
+        AGENT_PORT: String(agent.port)
+      }
+    });
+
+    let started = false;
+
+    child.stdout.on('data', (data) => {
+      const msg = data.toString().trim();
+      console.log(`[${agent.name}] ${msg}`);
+      if (!started) { started = true; resolve(child); }
+    });
+
+    child.stderr.on('data', (data) => {
+      console.error(`[${agent.name}] ${data.toString().trim()}`);
+      if (!started) { started = true; resolve(child); }
+    });
+
+    child.on('error', (error) => {
+      console.error(`[${agent.name}] Failed to start: ${error.message}`);
+      if (!started) { started = true; reject(error); }
+    });
+
+    child.on('close', (code) => {
+      console.log(`[${agent.name}] Process exited with code ${code}`);
+    });
+
+    // Resolve after 2 seconds even if no output
+    setTimeout(() => {
+      if (!started) { started = true; resolve(child); }
+    }, 2000);
+  });
 }
 
 // Main execution
 async function startAllAgents() {
   try {
-    // Create placeholder scripts
     await createPlaceholderScripts();
-    
-    // Start all agents concurrently
-    const agentPromises = agents.map(agent => startAgent(agent));
-    await Promise.all(agentPromises);
-    
-    console.log('\n🌟 All agents started successfully!');
+
+    const children = await Promise.all(agents.map(agent => startAgent(agent)));
+
+    console.log('\n🌟 All agents started!');
     console.log('\n📋 Agent Status:');
     agents.forEach(agent => {
       console.log(`   ${agent.name}: http://localhost:${agent.port}`);
     });
-    
-    console.log('\n🔄 Orchestration buses:');
-    console.log('   Local: ws://localhost:3101');
-    console.log('   Background: ws://localhost:3102');
-    console.log('   Cloud: ws://localhost:3103');
-    
-    console.log('\n💡 Use the Master Controller to coordinate swarm behaviors');
-    console.log('   Run: node master-controller.js');
-    
+
+    // Keep process alive
+    process.on('SIGINT', () => {
+      console.log('\n⚠️  Shutting down all agents...');
+      children.forEach(c => { try { c.kill(); } catch {} });
+      process.exit(0);
+    });
+
+    process.on('SIGTERM', () => {
+      children.forEach(c => { try { c.kill(); } catch {} });
+      process.exit(0);
+    });
+
   } catch (error) {
     console.error('❌ Error starting agents:', error);
     process.exit(1);
   }
 }
 
-// Start all agents
 startAllAgents();
-
-// Handle process termination
-process.on('SIGTERM', () => {
-  console.log('\n⚠️  Shutting down all agents...');
-  processes.forEach(proc => proc.kill());
-  process.exit(0);
-});
-
-process.on('SIGINT', () => {
-  console.log('\n⚠️  Shutting down all agents...');
-  processes.forEach(proc => proc.kill());
-  process.exit(0);
-});
