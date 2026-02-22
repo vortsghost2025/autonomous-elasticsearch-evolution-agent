@@ -135,7 +135,7 @@ export class PersistentMemory {
       // Replace the original file with the temporary one
       await fs.rename(tempPath, this.storagePath);
       
-      // Create backup
+      // Create backup of the current state
       await fs.copyFile(this.storagePath, this.backupPath);
       
       console.log(`[PersistentMemory] Saved to ${this.storagePath}`);
@@ -144,12 +144,11 @@ export class PersistentMemory {
       // Try to recover from backup if possible
       try {
         await fs.access(this.backupPath);
-        console.log('[PersistentMemory] Attempting to recover from backup...');
-        const backupData = await fs.readFile(this.backupPath, 'utf8');
-        this.data = JSON.parse(backupData);
-        console.log('[PersistentMemory] Successfully recovered from backup');
-      } catch (backupError) {
-        console.error('[PersistentMemory] Backup recovery failed:', backupError);
+        console.log(`[PersistentMemory] Attempting to restore from backup...`);
+        await fs.copyFile(this.backupPath, this.storagePath);
+        console.log('[PersistentMemory] Restored from backup');
+      } catch (restoreError) {
+        console.error('[PersistentMemory] Could not restore from backup:', restoreError);
       }
     }
   }
